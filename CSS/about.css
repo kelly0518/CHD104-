@@ -24,6 +24,9 @@
 .logo_photo{
     margin-left: 20px;
 }
+.logo_a{
+    text-decoration: none;
+}
 #menu{
     display: none;
 }

@@ -91,82 +91,54 @@
     }
 }
 
-.product_information{
+.news{
     margin-top: 130px;
     color: var(--color_font);
     position: relative;
 }
-.row{
-    margin-left: 10%;
-    /* margin-right: 5%; */
+.news_title{
+    font-size: 30px;
+    text-align: center;
 }
-.product_photo{
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    object-position: center 70%;
-    border-radius: 0px 0px 80px 0px;
-}
-.product_photo2{
+.news_photo{
     width: 320px;
     height: 220px;
     object-fit: cover;
-    object-position: center 70%;
+    object-position: center 30%;
     border-radius: 60px;
+    margin-left: 15%;
 }
-.product_name{
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 50px;
+#news_card{
+    /* margin-top: 30px; */
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color_brown);
+    /* border: 1px solid red; */
+    padding-top: 20px;
 }
-.btn_num{
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 41%;
-    right: 32%;
+#news_card:nth-child(7){
+    border-bottom: none;
 }
-.btn_sh{
-    justify-content: center;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: #ffff;
-    border:1px solid var(--color_brown);
-    border-radius: 6px;
-    padding: 8px 10px;
-    margin-top: 30px;
-    margin-right: 5px;
+#news_card:nth-child(8){
+    border-bottom: none;
 }
-.btn_a{
-    font-size: 14px;
+.news_a{
     text-decoration: none;
-    color: var(--color_brown);
 }
-.btn_icon{
-    width: 16px;
-    height: 16px;
-}
-.line{
-    border: 1px solid var(--color_brown);
-    margin-top: 30px;
-}
-.product_introduce{
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 5px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.pd_p{
+.news_p{
     font-size: 16px;
+    color: var(--color_font);
     letter-spacing: 2px;
-    line-height: 30px;
-    width: 320px;
+    margin-top: 10%;
 }
-#product_card{
-    margin-top: 10px;
-    margin-bottom: 20px;
+.more{
+    position: absolute;
+    bottom: 10px;
+    right: 8%;
 }
+.more_a{
+    text-decoration: none;
+}
+
 
 .homefoot{
     font-size: 16px;

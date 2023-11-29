@@ -4,8 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./CSS/grid.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/news.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
 </head>
 <body>
-    
+    <header>
+        <input type="checkbox" id="menu">
+        <div class="hometitle">
+            <div class="logo">
+                <img class="logo_photo" src="./HomePage_Photo/LOGO2.png" alt="Candleternity">
+            </div>
+            <label for="menu" class="hbtn">
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="function">
+                <a href="#brand_intr">品牌介紹</a>
+                <!--scroll-behavior: smooth-->
+                <a href="./product.html">商品介紹</a>
+                <a href="">最新消息</a>
+                <a href="./about.html">關於我們</a>
+                <a href="">常見問題</a> 
+                <a class="member" href="">
+                    <img class="homeicon" src="./HomePage_Photo/people.png" alt="">
+                    會員登入
+                </a>
+                <a class="member" href="">
+                    <img class="homeicon" src="./HomePage_Photo/Shop.png" alt="">
+                    購物車
+                </a>
+            </nav>  
+        </div>
+    </header>
+    <div class="news">
+        <h2 class="news_title">最新消息</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6" id="news_card">
+                    <a href="">
+                        <img class="news_photo" src="./news_photo/news1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6" id="news_card">
+                    <a class="news_a" href="">
+                        <p class="news_p">
+                            首購驚喜：新客戶即享優惠折扣！
+                        </p>
+                        <p class="news_p">
+                            即日起至4/30起，凡首次註冊會員，即贈送滿千折百抵用券一張~
+                        </p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6" id="news_card">
+                    <a href="">
+                        <img class="news_photo" src="./news_photo/news2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6" id="news_card">
+                    <a class="news_a" href="">
+                        <p class="news_p">
+                            燃點心靈：限時買三送一，打造您的溫馨小窩
+                        </p>
+                        <p class="news_p">
+                            7/1~7/31止，指定區域商品買三送一！
+                        </p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6" id="news_card">
+                    <a href="">
+                        <img class="news_photo" src="./news_photo/news3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6" id="news_card">
+                    <a class="news_a" href="">
+                        <p class="news_p">
+                            聖誕限定：歡慶聖誕節，特別優惠組合限量販售中~
+                        </p>
+                        <p class="news_p">
+                            聖誕節限定組合限量販售中，滿額再贈神秘小禮物一份~
+                        </p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6" id="news_card">
+                    <a href="">
+                        <img class="news_photo" src="./news_photo/news4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-12 col-md-6" id="news_card">
+                    <a class="news_a" href="">
+                        <p class="news_p">
+                            生日禮遇：當月壽星享特別折扣優惠~
+                        </p>
+                        <p class="news_p">
+                            加入品牌會員，於生日當月可獲得9折優惠券一張!
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <a class="more_a" href="">
+                more
+            </a>
+        </div>
+    </div>  
+    <footer>
+        <div class="homefoot">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="foot_function">
+                            <a class="foot_btn" href="">Top</a>
+                            <a class="foot_btn" href="">Story</a>
+                            <a class="foot_btn" href="">Product</a>
+                            <a class="foot_btn" href="">News</a>
+                            <a class="foot_btn" href="">About</a>
+                            <a class="foot_btn" href="">Q&A</a>
+                        </div>
+                        <div class="foot_information">
+                            <p>Candleternity0702@gmail.com</p>
+                            <p>桃園市一二區三四街56號</p>
+                            <p>02-1111-2222</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="foot_icon">
+                            <a class="ft_ic" href="">
+                                <img class="ft_pt" src="./HomePage_Photo/facebook.png" alt="facebook">
+                            </a>
+                            <a class="ft_ic" href="">
+                                <img class="ft_pt" src="./HomePage_Photo/line.png" alt="line">
+                            </a>
+                            <a class="ft_ic" href="">
+                                <img class="ft_pt" src="./HomePage_Photo/instagram.png" alt="insragram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© Candleternity 2023 </p>
+            <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
+        </div>
+    </footer>
 </body>
 </html>

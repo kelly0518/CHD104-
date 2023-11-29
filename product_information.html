@@ -6,11 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/grid.css">
     <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./CSS/homepage.css">
+    <link rel="stylesheet" href="./CSS/product_information.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap" rel="stylesheet">
 </head>
-<body>   
+<body>
     <header>
         <input type="checkbox" id="menu">
         <div class="hometitle">
@@ -38,81 +37,73 @@
                 </a>
             </nav>  
         </div>
-    </header>    
-    <div class="banner">
-        <div class="banner_photo">
-            <img class="bn" src="./HomePage_Photo/banner_photo.jpg" alt="">
-        </div>
-        <div class="banner_word">
-            <p class="bw1">Light tomorrow</p>
-            <p class="bw2">with</p>
-            <p class="bw3">today.</p>
-        </div>
-    </div>
-    <br id="brand_intr">
-    <br>
-    <br>    
-    <div class="brand">
+    </header>
+    <div class="product_information">
         <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="brand_story">
-                    <h2 class="brand_introduce" >品牌介紹</h2>
-                    <p class="brand_content">當我們開始踏上創立這個品牌的旅程時，我們心中懷抱著對自然和環境的尊重，以及對生活中美好、溫馨時刻的珍惜。這個品牌的誕生源於我們對地球的熱愛，以及對蠟燭藝術的熱情。</p>
-                    <br>
-                    <p class="brand_content">我們深信，每個蠟燭都應該是一個小小的藝術品。我們的蠟燭以天然的大豆蠟和環保燭芯製成，以確保您在點燃蠟燭的那一刻，可以享受到最純粹的光芒和香氛。</p>
-                    <br>
-                    <p class="brand_content">我們希望提供一種美好的蠟燭體驗，可以讓您在繁忙的日常生活中找到平靜和喜悅的方式。在此誠摯地邀請您一同加入我們的蠟燭之旅，為每一個特別時刻點綴出美好的回憶。</p>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="product_name">商品名稱: 海洋寧靜</p>
+                    <p class="product_name">價格: NT$599</p>
+                    <p class="product_name">選擇數量:</p>
+                    <button class="btn_num">
+                        <p>-</p>
+                        <p>1</p>
+                        <p>+</p>
+                    </button>
+                    <button class="btn_sh">
+                        <a href="">
+                            <img src="" alt="">
+                            加入購物車
+                        </a>
+                    </button>
+                    <button class="btn_sh">
+                        <a href="">
+                            <img src="" alt="">
+                            立即購買
+                        </a>
+                    </button>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="brand_cube1"></div>
-                <div class="brand_cube2"></div>
-                <div class="brand_photo">
-                    <img class="brand_pt" src="./HomePage_Photo/brand_photo.jpg" alt="">
+            <div class="line"></div>    
+        </div>
+        
+
+        </div>
+        <h2 class="product_introduce">商品介紹</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6" id="product_card">
+                    <p class="pd_p">此款蠟燭的香氣主要由海洋風味、淡淡的椰子和清新的海風調和而成，它能為您帶來寧靜放鬆和一種沐浴在海洋波浪聲中的感覺。</p>
+                </div>
+                <div class="col-12 col-md-6" id="product_card">
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-6" id="product_card">
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-6" id="product_card">
+                    <p class="pd_p">調香細節：
+                        主調：清新的海風、椰子
+                        中調：柑橘、茉莉花
+                        基調：檀香、礦物氣味</p>
+                </div>
+                <div class="col-12 col-md-6" id="product_card">
+                    <p class="pd_p">尺寸：
+                        直徑：10cm
+                        高度：15cm</p>
+                </div>
+                <div class="col-12 col-md-6" id="product_card">
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    </div>
-    <br>
-    <br>
-    <div class="product">
-        <h2 class="product_introduce">商品介紹</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4" id="product_card">
-                    <img class="product_photo" src="./HomePage_Photo/晨曦曙光.jpg" alt="">
-                    <p class="product_name">商品名稱:晨曦曙光</p>
-                    <button class="pdbtn">
-                        <a class="shopbag2" href="">
-                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="">
-                        加入購物車</a>
-                    </button>
-                </div>
-                <div class="col-12 col-md-4" id="product_card">
-                    <img class="product_photo" src="./HomePage_Photo/夜空星辰.jpg" alt="">
-                    <p class="product_name">商品名稱:夜空星辰</p>
-                    <button class="pdbtn">
-                        <a class="shopbag2" href="">
-                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="">
-                        加入購物車</a>
-                    </button>
-                </div>
-                <div class="col-12 col-md-4" id="product_card">
-                    <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="">
-                    <p class="product_name">商品名稱:海洋寧靜</p>
-                    <button class="pdbtn">
-                        <a class="shopbag2" href="">
-                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="">
-                        加入購物車</a>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
+
+
     <footer>
         <div class="homefoot">
             <div class="container">
@@ -150,6 +141,6 @@
             <p class="copyright">© Candleternity 2023 </p>
             <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
         </div>
-    </footer> 
+    </footer>
 </body>
 </html>

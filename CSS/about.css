@@ -1,0 +1,194 @@
+.html,body{
+    --color_brown: #89756A;
+    --color_rose: #E6BCB5;
+    --color_font: #423731;
+    /* scroll-behavior: smooth; */
+    font-family:'Noto Sans TC', sans-serif;
+    background: url(../HomePage_Photo/background_photo.png),rgba(246,233,230,0.3);
+}
+
+.hometitle{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.logo{
+    display: block;  
+}
+.logo_photo{
+    margin-left: 20px;
+}
+#menu{
+    display: none;
+}
+.hbtn{
+    width: 30px;
+    height: 30px;
+    background-color: #E6BCB5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15px;
+}
+@media (width>=768px) {
+    .hbtn{
+        display: none;
+    }
+    
+}
+.hbtn span{
+    width: 80%;
+    height: 2px;
+    margin: 3px auto;
+    background-color: #fff;
+}
+.function{
+    margin-top: 15px;
+}
+@media (width<768px) {
+    .function{
+    display: none;
+    width: 100%;
+    background-color: #EDD6C9;
+    } 
+}
+.member{
+    border:2px solid #B69D8F;
+    border-radius: 20px;
+}
+.homeicon{
+    width: 20px;
+    height: 20px;
+}
+.function a{
+    text-decoration: none;
+    color:#89756A;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    margin: 0px 15px 0px 0px;
+}
+@media (width<768px) {
+    .function a{
+        display: block;
+        padding: 8px;
+    }
+    .member{
+        border:none;
+        border-radius: 0px;
+    }
+    #menu:checked ~ .hometitle .function{
+        display: block;
+    }
+    .function a + a{
+    border-top: 1px solid #fff;
+    }
+}
+
+.aboutus_content{
+    margin-top: 130px;
+    position: relative;
+    color: var(--color_font);
+}
+.row{
+    border: "";
+}
+.aboutus{
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.about_photo1{
+    aspect-ratio: 800/420;
+    border-radius: 0px 0px 100px 0px;
+    width: 70%;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about_pt1{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+    border-radius: 0px 0px 0px 100px;
+    
+}
+.about_photo2{
+    aspect-ratio: 200/140;
+    border-radius: 0px 120px 0px 120px;
+    width: 30%;
+    position: absolute;
+    top: 5%;
+    right: 15%;
+}
+.about_pt2{
+    object-fit: cover;
+    object-position: center 55%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 120px 0px 120px;
+}
+#about_card{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.aboutus_h{
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 50px;
+}
+.aboutus_p{
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 50px;
+}
+
+.homefoot{
+    font-size: 16px;
+    color: var(--color_font);
+    width: 100%;
+    background-color: var(--color_rose);
+}
+.foot_function{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.foot_btn{
+    color: var(--color_font);
+    text-decoration: none;
+    margin-right: 5px;
+    padding-right: 15px;
+    
+}    
+.foot_information{
+    line-height: 25px;
+    text-align: left;
+    margin-left: 70px;
+}
+.foot_icon{
+    margin-top: 10px; 
+}
+.ft_ic{
+    padding-right: 15px;
+    text-decoration: none;
+}
+.ft_pt{
+    width: 25px;
+    height: 25px;
+}
+.copyright{
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+}

@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="./CSS/grid.css">
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/news.css">
+
+    <link rel="icon" href="./HomePage_Photo/icon3.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <script src="./JS/index.js"></script>
 </head>
 <body>
     <header>
@@ -15,7 +22,7 @@
         <div class="hometitle">
             <div class="logo">
                 <a class="logo_a" href="./index.html">
-                <img class="logo_photo" src="./HomePage_Photo/LOGO2.png" alt="Candleternity">
+                <img class="logo_photo" src="./HomePage_Photo/logo.svg" alt="Candleternity">
                 </a>
             </div>
             <label for="menu" class="hbtn">
@@ -23,107 +30,117 @@
                 <span></span>
             </label>
             <nav class="function">
-                <a href="#brand_intr">品牌介紹</a>
-                <!--scroll-behavior: smooth-->
-                <a href="./product.html">商品介紹</a>
-                <a href="./news.html">最新消息</a>
-                <a href="./about.html">關於我們</a>
-                <a href="">常見問題</a> 
-                <a class="member" href="">
-                    <img class="homeicon" src="./HomePage_Photo/people.png" alt="">
-                    會員登入
+                <a class="ft_t" href="#brand_intr">品牌介紹</a>
+                <a class="ft_t" href="./product.html">商品介紹</a>
+                <a class="ft_t" href="./news.html">最新消息</a>
+                <a class="ft_t" href="./about.html">關於我們</a>
+                <a class="ft_t" href="./Q&A.html">常見問題</a> 
+                <a class="member" href="./member.html">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="mem_p">會員登入</div>
                 </a>
-                <a class="member" href="">
-                    <img class="homeicon" src="./HomePage_Photo/Shop.png" alt="">
-                    購物車
+                <a class="member" href="./cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="mem_p2">購物車</div>
                 </a>
             </nav>  
         </div>
     </header>
+
     <div class="news">
         <h2 class="news_title">最新消息</h2>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6" id="news_card">
+                <div class="col-12 col-md-12" id="news_card">
                     <a href="">
                         <img class="news_photo" src="./news_photo/news1.jpg" alt="">
                     </a>
-                </div>
-                <div class="col-12 col-md-6" id="news_card">
                     <a class="news_a" href="">
-                        <p class="news_p">
-                            首購驚喜：新客戶即享優惠折扣！
-                        </p>
-                        <p class="news_p">
-                            即日起至4/30起，凡首次註冊會員，即贈送滿千折百抵用券一張~
-                        </p>
+                        <div class="news_content">
+                            <p class="news_p">
+                                首購驚喜：新客戶即享優惠折扣！
+                            </p>
+                            <p class="news_p">
+                                即日起至4/30起，凡首次註冊會員，即贈送滿千折百抵用券一張~
+                                <br>
+                                歡迎加入Candleternity！我們為所有新客戶推出了首購驚喜活動。現在，您只需在首次購物時輸入優惠碼，即可享受精選商品的折扣優惠。這是我們對您的特別禮遇，讓您在Candleternity的第一次購物中感受到更多驚喜與美好。不容錯過的機會，讓我們一同為您的生活點亮一絲燭光！
+                            </p>
+                        </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-6" id="news_card">
+                <div class="line"></div>
+                <div class="col-12 col-md-12" id="news_card">
                     <a href="">
                         <img class="news_photo" src="./news_photo/news2.jpg" alt="">
                     </a>
-                </div>
-                <div class="col-12 col-md-6" id="news_card">
                     <a class="news_a" href="">
-                        <p class="news_p">
-                            燃點心靈：限時買三送一，打造您的溫馨小窩
-                        </p>
-                        <p class="news_p">
-                            7/1~7/31止，指定區域商品買三送一！
-                        </p>
+                        <div class="news_content">
+                            <p class="news_p">
+                                燃點心靈：限時買三送一，打造您的溫馨小窩
+                            </p>
+                            <p class="news_p">
+                                7/1~7/31止，指定區域商品買三送一！
+                                <br>
+                                現在是打造溫馨小窩的最佳時機！參與我們的「燃點心靈」活動，只要您在限定時間內購買三支蠟燭，就可以額外獲得一支免費贈送。這是Candleternity送給您的溫馨禮物，讓您的空間充滿燭光的美好。無論是自己享受還是送給親朋好友，都讓溫馨與美好共存。趕快選擇您喜愛的蠟燭，一同打造獨一無二的家居氛圍！
+                            </p>
+                        </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-6" id="news_card">
+                <div class="line"></div>
+                <div class="col-12 col-md-12" id="news_card">
                     <a href="">
                         <img class="news_photo" src="./news_photo/news3.jpg" alt="">
                     </a>
-                </div>
-                <div class="col-12 col-md-6" id="news_card">
                     <a class="news_a" href="">
-                        <p class="news_p">
-                            聖誕限定：歡慶聖誕節，特別優惠組合限量販售中~
-                        </p>
-                        <p class="news_p">
-                            聖誕節限定組合限量販售中，滿額再贈神秘小禮物一份~
-                        </p>
+                        <div class="news_content">
+                            <p class="news_p">
+                                聖誕限定：歡慶聖誕節，特別優惠組合限量販售中~
+                            </p>
+                            <p class="news_p">
+                                聖誕節限定組合限量販售中，滿額再贈神秘小禮物一份~
+                                <br>
+                                聖誕將至，Candleternity為您準備了獨家的聖誕限定優惠組合！這些特別挑選的組合包含了我們最受歡迎的蠟燭，讓您在節慶季節營造出獨特的聖誕氛圍。不僅僅是節慶裝飾，更是一份充滿溫暖的禮物。數量有限，趕快選購您心儀的聖誕組合，與Candleternity一同歡度這個特別的季節！
+                            </p>
+                        </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-6" id="news_card">
+                <div class="line"></div>
+                <div class="col-12 col-md-12" id="news_card">
                     <a href="">
                         <img class="news_photo" src="./news_photo/news4.jpg" alt="">
                     </a>
-                </div>
-                <div class="col-12 col-md-6" id="news_card">
                     <a class="news_a" href="">
-                        <p class="news_p">
-                            生日禮遇：當月壽星享特別折扣優惠~
-                        </p>
-                        <p class="news_p">
-                            加入品牌會員，於生日當月可獲得9折優惠券一張!
-                        </p>
+                        <div class="news_content">
+                            <p class="news_p">
+                                生日禮遇：當月壽星享特別折扣優惠~
+                            </p>
+                            <p class="news_p">
+                                加入品牌會員，於生日當月可獲得9折優惠券一張!
+                                <br>
+                                在Candleternity，我們為每位壽星準備了特別的生日禮遇。當您在生日月份購物時，只需輸入生日優惠碼，即可享受整個訂單的額外折扣優惠！這是我們對您的生日祝福，希望您的生日更加燦爛、溫馨。無論是為自己選購，還是送給親友，都讓燭光伴隨您度過一個特別的生日。快來Candleternity，感受生日的溫馨與驚喜！
+                            </p>
+                        </div>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="more">
-            <a class="more_a" href="">
-                more
-            </a>
-        </div>
-    </div>  
+        <button class="more">
+            more
+        </button>
+    </div>
+    
     <footer>
         <div class="homefoot">
             <div class="container">
-                <div class="row">
+                <div class="row" id="ft_r">
                     <div class="col-12 col-md-6">
                         <div class="foot_function">
-                            <a class="foot_btn" href="">Top</a>
-                            <a class="foot_btn" href="">Story</a>
-                            <a class="foot_btn" href="">Product</a>
-                            <a class="foot_btn" href="">News</a>
-                            <a class="foot_btn" href="">About</a>
-                            <a class="foot_btn" href="">Q&A</a>
+                            <a class="foot_btn" href=".logo">Top</a>
+                            <a class="foot_btn" href="#brand_intr">Story</a>
+                            <a class="foot_btn" href="./product.html">Product</a>
+                            <a class="foot_btn" href="./news.html">News</a>
+                            <a class="foot_btn" href="./about.html">About</a>
+                            <a class="foot_btn" href="./Q&A.html">Q&A</a>
                         </div>
                         <div class="foot_information">
                             <p>Candleternity0702@gmail.com</p>
@@ -133,22 +150,31 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="foot_icon">
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-square-facebook"></i> -->
                                 <img class="ft_pt" src="./HomePage_Photo/facebook.png" alt="facebook">
                             </a>
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-line" id="ln"></i> -->
                                 <img class="ft_pt" src="./HomePage_Photo/line.png" alt="line">
                             </a>
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-instagram"></i> -->
                                 <img class="ft_pt" src="./HomePage_Photo/instagram.png" alt="insragram">
                             </a>
                         </div>
+                        <!-- <div class="logo_icon">
+                            <img class="logo_ic" src="./HomePage_Photo/logo_circle.svg" alt="">
+                        </div> -->
                     </div>
                 </div>
             </div>
-            <p class="copyright">© Candleternity 2023 </p>
-            <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
+            <div class="cr_p">
+                <p class="copyright">© Candleternity 2023 </p>
+                <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
+                <!-- <p class="copyright">僅供學習、展示用。</p> -->
+            </div>
         </div>
-    </footer>
+    </footer> 
 </body>
 </html>

@@ -8,6 +8,10 @@
     background: url(../HomePage_Photo/background2.png),rgba(246,233,230,0.5)
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .hometitle{
     display: flex;
     justify-content: space-between;
@@ -146,6 +150,107 @@
     }
 }
 
+#mm{
+    width: 600px;
+    height: 400px;
+    /* aspect-ratio: 600/400; */
+    background-color:rgba(255,255,255,0.8);
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    text-align: center;
+    display: none;
+    z-index: 2;
+    transform: translateX(-50%);
+    display: none;
+    @media (max-width: 768px) {
+        width: 90%; /* 或者根據需要調整百分比 */
+        aspect-ratio: 3/1; /* 保持 2:3 的長寬比例，可以根據需要調整 */
+    }
+}
+.member_title{
+    font-size: 30px;
+    color: var(--color_font);
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+.member_login{
+    display: inline-block;
+    margin: 10px auto;
+    font-size: 16px;
+}
+
+#account{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#number{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.btn_f{
+    margin-top: 20px;
+    margin-right: 5px;
+    background-color: #3B579D;
+    border: none;
+    color: #ffff;
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.btn_l{
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: #06C755;
+    border: none;
+    color: #ffff;
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+}
+@media (width<768px) {
+    .btn_f{
+        margin-right: 0;
+    }
+    .btn_l{
+        margin-left: 0;
+    }
+    
+}
+.btn_icon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align:middle;
+}
+.submit_btn{
+    margin-top: 20px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 20px;
+    border:1.5px solid var(--color_brown);
+    width: 120px;
+    height: 35px;
+    background-color: #0000;
+
+}
+.btn_log{
+    margin-top: 20px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 20px;
+    border:1.5px solid var(--color_brown);
+    width: 120px;
+    height: 35px;
+    background-color: #0000;
+}
+
+
 .product_information{
     margin-top: 130px;
     color: var(--color_font);
@@ -154,6 +259,7 @@
 #product_card{
     margin-top: 10px;
     margin-bottom: 30px;
+    /* padding-left: 10%; */
 }
 .product_photo{
     width: 350px;
@@ -163,6 +269,20 @@
     border-radius: 0px 0px 80px 0px;
     margin-left: 10%;
     
+}
+@media (width<768px) {
+    .product_photo{
+        width: 300px;
+        height: 200px;
+    }
+    .pd_p{
+        width: 100%;
+    }
+    /* .in_cart{
+        left: 10px;
+        top: 10px;
+        
+    } */
 }
 
 .product_name{
@@ -179,8 +299,10 @@
 .btn_a{
     margin-top: 30px;
     margin-left: 50px;
+    
 }
 .btn_cart{
+    text-decoration: none;
     justify-content: center;
     display: inline-block;
     text-align: center;
@@ -191,27 +313,11 @@
     margin-right: 5px;
     font-size: 14px;
     letter-spacing: 1px;
-    /* text-decoration: none; */
     color: var(--color_brown);
     width: 120px;
-    /* height: 20px; */
+    cursor: pointer;
 }
-.btn_buy{
-    justify-content: center;
-    display: inline-block;
-    text-align: center;
-    background-color: #0000;
-    border:1.5px solid var(--color_brown);
-    border-radius: 6px;
-    padding: 8px 8px;
-    margin-right: 5px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: var(--color_brown);
-    width: 110px;
-    height: 20px;
-}
+
 .btn_icon{
     width: 16px;
     height: 16px;
@@ -231,20 +337,22 @@
 .in_cart{
     width: 300px;
     height: 200px;
-    background-color: rgba(255, 255, 255, 0.4);
+    /* aspect-ratio: 600/200; */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 6px;
-    
     flex-direction: column;
     margin: auto;
     position: absolute;
-    left: 40%;
+    left: 50%;
     top: 30%;
-    /* overflow: hidden; */
+    transform: translateX(-50%);
     display: none;
+    @media (max-width: 768px) {
+        width: 80%; /* 或者根據需要調整百分比 */
+        aspect-ratio: 2/3; /* 保持 2:3 的長寬比例，可以根據需要調整 */
+    }
 }
-/* .in_cart_open{
-    height: 200px;
-} */
+
 #tick{
     margin-top: 50px;
     font-size: 40px;
@@ -274,7 +382,6 @@
     line-height: 30px;
     width: 350px;
     margin-left: 10%;
-    
 }
 
 

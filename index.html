@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +31,7 @@
             <label for="menu" class="hbtn">
                 <span></span>
                 <span></span>
+                <span></span>
             </label>
             <nav class="function">
                 <a class="ft_t" href="#brand_intr">品牌介紹</a>
@@ -38,7 +39,7 @@
                 <a class="ft_t" href="./news.html">最新消息</a>
                 <a class="ft_t" href="./about.html">關於我們</a>
                 <a class="ft_t" href="./Q&A.html">常見問題</a> 
-                <a class="member" href="./member.html">
+                <a class="member js_member" href="#">
                     <i class="fa-solid fa-user"></i>
                     <div class="mem_p">會員登入</div>
                 </a>
@@ -50,6 +51,28 @@
         </div>
     </header> 
     
+    <div class="col-12 col-md-12" id="mm">
+        <h2 class="member_title">會員登入</h2>
+        <form class="member_login">
+            <label for="account">帳號</label>
+            <input type="email" id="account" placeholder=" 請輸入Email" size="30">
+            <br>
+            <label for="number">密碼</label>
+            <input type="password" id="number" placeholder=" 密碼為8~12碼(含英文大小寫)" minlength="8" maxlength="12" size="30">
+            <br>
+            <input type="submit" value="登入" class="submit_btn">
+            <br>
+            <button class="btn_f">
+                <img src="./member_photo/facebook.png" alt="facebook" class="btn_icon">
+                facebook 登入</button>
+            <button class="btn_l">
+                <img src="./member_photo/line.png" alt="line" class="btn_icon">
+                line 登入</button>
+            <br>
+            <button class="btn_log">尚未註冊？</button>
+        </form>
+    </div>
+
     <div class="banner">
         <div class="banner_photo">
             <img class="bn" src="./HomePage_Photo/banner_photo.jpg" alt="">
@@ -97,7 +120,7 @@
                 <div class="col-12 col-md-12" id="product_card">
                     <img class="product_photo" src="./HomePage_Photo/晨曦曙光.jpg" alt="晨曦曙光">
                     <p class="product_name">晨曦曙光</p>
-                    <button class="pdbtn">
+                    <button class="btn_cart js_btn_cart">
                         <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
                         加入購物車
                     </button>  
@@ -105,7 +128,7 @@
                 <div class="col-12 col-md-12" id="product_card">
                     <img class="product_photo" src="./HomePage_Photo/夜空星辰.jpg" alt="夜空星辰">
                     <p class="product_name">夜空星辰</p>
-                    <button class="pdbtn">
+                    <button class="btn_cart js_btn_cart">
                         <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
                         加入購物車
                     </button>                    
@@ -113,7 +136,7 @@
                 <div class="col-12 col-md-12" id="product_card">
                     <img class="product_photo" src="./HomePage_Photo/徒步山林.jpg" alt="徒步山林">
                     <p class="product_name">徒步山林</p>
-                    <button class="pdbtn">
+                    <button class="btn_cart js_btn_cart">
                         <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
                         加入購物車
                     </button>                    
@@ -121,7 +144,7 @@
                 <div class="col-12 col-md-12" id="product_card">
                     <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="海洋寧靜">
                     <p class="product_name">海洋寧靜</p>
-                    <button class="pdbtn">
+                    <button class="btn_cart js_btn_cart">
                         <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
                         加入購物車
                     </button>                    
@@ -129,12 +152,12 @@
                 <div class="col-12 col-md-12" id="product_card">
                     <img class="product_photo" src="./HomePage_Photo/玫瑰之舞.jpg" alt="玫瑰之舞">
                     <p class="product_name">玫瑰之舞</p>
-                    <button class="pdbtn">
+                    <button class="btn_cart js_btn_cart">
                         <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
                         加入購物車
                     </button>                    
                 </div>
-            </div>
+            </div>            
         </div>
     </div>
     <br>

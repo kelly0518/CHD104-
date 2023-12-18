@@ -22,11 +22,19 @@ $(function(){
     });
 })
 
+$(document).ready(function() {
+    $("#menu").click(function() {
+        $("html, body").toggleClass("no-scroll");
+    });
+});
+
+
+
 
 //product information
 
 $(document).ready(function(e){
-    $(".btn_cart").click(function(){
+    $(".js_btn_cart").click(function(){
         $(".in_cart").toggle();
         setTimeout(function(){
             $(".in_cart").hide();
@@ -195,7 +203,76 @@ $(function(){
 // }
 
 
+function $id(id){
+    return document.getElementById(id);
+}
+
+function addSpot(){
+    let item_list = $id("item_list");
+    let buy = $id("buy");
+    let cart_card = document.getElementsByClassName("cart_card")[0];
+    let newCartCard = cart_card.cloneNode(true);
+
+    newCartCard.style.display = "block";
+    newCartCard.getElementsbyTagname("minus")[0].onclick = removeSpot;
+    item_list.insertBefore(newCartCard, buy);
+}
+
+function removeSpot(e){
+    let minus = e.target;
+    $id("item_list").removeChild(miuns.parentNode);
+}
+
+window.addEventListener("input",function(){
+    $id(".btn_buy").onclick = addSpot;
+
+    document.querySelector(".minus").onclick = removeSpot;
+})
 
 
+// $(function(){
+//     $('.btn_buy').click(function(){
+//         let item = $(this).text('.cart_card')
+
+//         $('#item_list').append(`<div>${item}</div>`)
+//     })
+// })
 
 
+//news
+$(function(){
+    // let counter = 2;
+
+    $('.more').click(function(){
+        let newsItem = $('#news_card').clone(true);
+        // let newsLine = $('.line').clone(true);
+
+        // let newsId = 'news_card' + counter;
+        // newsItem.attr('id', newsId);
+        $('.news').append(newsItem);
+
+        // counter++;
+    });
+});
+
+
+//member
+$(document).ready(function(e){
+    $(".js_member").click(function(){
+        $("#mm").css('display','block');
+    });
+    $(document).mouseup(function(e){
+        var container = $("#mm");
+
+        // 如果點擊事件不在 #mm 或其子元素上
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            container.hide();
+        }        
+    });
+    // $(".submit_btn, .btn_log").click(function() {
+    //     $("#mm").hide();
+    // });
+});
+
+
+    

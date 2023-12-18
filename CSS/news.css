@@ -7,6 +7,10 @@
     background: url(../HomePage_Photo/background2.png),rgba(246,233,230,0.5);
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .hometitle{
     display: flex;
     justify-content: space-between;
@@ -145,6 +149,107 @@
     }
 }
 
+#mm{
+    width: 600px;
+    height: 400px;
+    /* aspect-ratio: 600/400; */
+    background-color:rgba(255,255,255,0.8);
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    text-align: center;
+    display: none;
+    z-index: 2;
+    transform: translateX(-50%);
+    display: none;
+    @media (max-width: 768px) {
+        width: 90%; /* 或者根據需要調整百分比 */
+        aspect-ratio: 4/1; /* 保持 2:3 的長寬比例，可以根據需要調整 */
+    }
+}
+.member_title{
+    font-size: 30px;
+    color: var(--color_font);
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+.member_login{
+    display: inline-block;
+    margin: 10px auto;
+    font-size: 16px;
+}
+
+#account{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#number{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.btn_f{
+    margin-top: 20px;
+    margin-right: 5px;
+    background-color: #3B579D;
+    border: none;
+    color: #ffff;
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.btn_l{
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: #06C755;
+    border: none;
+    color: #ffff;
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+}
+@media (width<768px) {
+    .btn_f{
+        margin-right: 0;
+    }
+    .btn_l{
+        margin-left: 0;
+    }
+    
+}
+.btn_icon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align:middle;
+}
+.submit_btn{
+    margin-top: 20px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 20px;
+    border:1.5px solid var(--color_brown);
+    width: 120px;
+    height: 35px;
+    background-color: #0000;
+
+}
+.btn_log{
+    margin-top: 20px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 20px;
+    border:1.5px solid var(--color_brown);
+    width: 120px;
+    height: 35px;
+    background-color: #0000;
+}
+
+
 .news{
     margin-top: 130px;
     color: var(--color_font);
@@ -167,14 +272,18 @@
     #news_card{
         display: block;
     }
+
+}
+.news_photoborder{
+    
 }
 .news_photo{
-    width: 400px;
-    height: 240px;
+    width: 320px;
+    height: 220px;
     object-fit: cover;
     object-position: center 30%;
     border-radius: 0px 0px 80px 0px;
-    margin-right: 60px;
+    /* margin-right: 60px; */
     
 }
 
@@ -184,6 +293,7 @@
 }
 .news_content{
     margin-right: 10%;
+    margin-left: 5%;
     margin-top: 20px;
 }
 .news_p{
@@ -206,6 +316,7 @@
     width: 30px;
     height: 20px;
     border: 1px solid var(--color_milktea);
+    cursor: pointer;
 }
 
 

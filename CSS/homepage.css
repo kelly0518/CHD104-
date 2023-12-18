@@ -8,6 +8,10 @@
     background: url(../HomePage_Photo/background2.png),rgba(246,233,230,0.5);
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .hometitle{
     display: flex;
     justify-content: space-between;
@@ -121,6 +125,7 @@
 .function .ft_t:hover{
     color: var(--color_rose);
     font-weight: 500;
+    
 }
 @media (width<768px) {
     .function a{
@@ -137,17 +142,120 @@
     #menu:checked ~ .hometitle .hbtn{
         background-color: var(--color_brown);
     }
-    #menu:checked ~ .hometitle .hbtn span:first-child{
-        width: 100%;
-        transform: translateX(0%) translateY(250%)rotate(45deg);
+    #menu:checked ~ .hometitle .hbtn span:nth-child(1){
+        width: 110%;
+        transform: translateX(-7%) translateY(290%)rotate(45deg);
     }
-    #menu:checked ~ .hometitle .hbtn span:last-child{
-        width: 100%;
-        transform: translateX(0%) translateY(-250%)rotate(-45deg);
+    #menu:checked ~ .hometitle .hbtn span:nth-child(2){
+        display: none;
+    }
+    #menu:checked ~ .hometitle .hbtn span:nth-child(3){
+        width: 110%;
+        transform: translateX(-7%) translateY(-290%)rotate(-45deg);
     }
     .function a + a{
     border-top: 1px solid #fff;
     }
+}
+
+#mm{
+    width: 600px;
+    height: 400px;
+    /* aspect-ratio: 600/400; */
+    background-color:rgba(255,255,255,0.8);
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    text-align: center;
+    display: none;
+    z-index: 2;
+    transform: translateX(-50%);
+    display: none;
+    @media (max-width: 768px) {
+        width: 90%; /* 或者根據需要調整百分比 */
+        aspect-ratio: 4/1; /* 保持 2:3 的長寬比例，可以根據需要調整 */
+    }
+}
+.member_title{
+    font-size: 30px;
+    color: var(--color_font);
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+.member_login{
+    display: inline-block;
+    margin: 10px auto;
+    font-size: 16px;
+}
+
+#account{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#number{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.btn_f{
+    margin-top: 20px;
+    margin-right: 5px;
+    background-color: #3B579D;
+    border: none;
+    color: #ffff;
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.btn_l{
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: #06C755;
+    border: none;
+    color: #ffff;
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+}
+@media (width<768px) {
+    .btn_f{
+        margin-right: 0;
+    }
+    .btn_l{
+        margin-left: 0;
+    }
+    
+}
+.btn_icon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align:middle;
+}
+.submit_btn{
+    margin-top: 20px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 20px;
+    border:1.5px solid var(--color_brown);
+    width: 120px;
+    height: 35px;
+    background-color: #0000;
+
+}
+.btn_log{
+    margin-top: 20px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 20px;
+    border:1.5px solid var(--color_brown);
+    width: 120px;
+    height: 35px;
+    background-color: #0000;
 }
 
 
@@ -222,6 +330,7 @@
 .brand_photo{
     aspect-ratio: 400/600;
     border-radius: 0px 0px 0px 100px;
+    margin-left: 50px;
     margin-right: 100px;
     margin-top: 5%;
     overflow: hidden;
@@ -266,12 +375,9 @@
     } */
     /* .brand_photo{
         margin-right: 0%;
+        
     } */
-    /* .brand_pt{
-        margin-right: 0%;
-        width: 280px;
-        height: 420px;
-} */
+    
 }
 .product{
     margin-top: 5%;
@@ -345,7 +451,7 @@
     margin-bottom: 20px;
     letter-spacing: 3px;
 }
-.pdbtn{
+.btn_cart{
     justify-content: center;
     background-color: #0000;
     border: 1.5px solid var(--color_brown);
@@ -373,6 +479,39 @@
     font-size: 25px;
     margin-left: 96%;
     margin-top: 12%;
+}
+
+.in_cart{
+    width: 300px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    
+    flex-direction: column;
+    margin: auto;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    /* overflow: hidden; */
+    display: none;
+}
+/* .in_cart_open{
+    height: 200px;
+} */
+#tick{
+    margin-top: 50px;
+    font-size: 40px;
+    color: var(--color_brown);
+    display: flex;
+    justify-content: center;
+}
+.in_cart_p{
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 18px;
+    color: var(--color_brown);
+    display: flex;
+    justify-content: center;
 }
 
 

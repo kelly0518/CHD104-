@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cnadleternity</title>
+    <title>Candleternity</title>
     <link rel="stylesheet" href="./CSS/grid.css">
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/homepage.css">
+
+    <link rel="icon" href="./HomePage_Photo/icon3.ico" type="image/x-icon">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+
     <link href="https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <script src="./JS/index.js"></script>
 </head>
 <body>   
     <header>
@@ -16,7 +25,7 @@
         <div class="hometitle">
             <div class="logo">
                 <a class="logo_a" href="./index.html">
-                <img class="logo_photo" src="./HomePage_Photo/LOGO2.png" alt="Candleternity">
+                <img class="logo_photo" src="./HomePage_Photo/logo.svg" alt="Candleternity">
                 </a>
             </div>
             <label for="menu" class="hbtn">
@@ -24,31 +33,31 @@
                 <span></span>
             </label>
             <nav class="function">
-                <a href="#brand_intr">品牌介紹</a>
-                <!--scroll-behavior: smooth-->
-                <a href="./product.html">商品介紹</a>
-                <a href="./news.html">最新消息</a>
-                <a href="./about.html">關於我們</a>
-                <a href="">常見問題</a> 
-                <a class="member" href="">
-                    <img class="homeicon" src="./HomePage_Photo/people.png" alt="">
-                    會員登入
+                <a class="ft_t" href="#brand_intr">品牌介紹</a>
+                <a class="ft_t" href="./product.html">商品介紹</a>
+                <a class="ft_t" href="./news.html">最新消息</a>
+                <a class="ft_t" href="./about.html">關於我們</a>
+                <a class="ft_t" href="./Q&A.html">常見問題</a> 
+                <a class="member" href="./member.html">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="mem_p">會員登入</div>
                 </a>
-                <a class="member" href="">
-                    <img class="homeicon" src="./HomePage_Photo/Shop.png" alt="">
-                    購物車
+                <a class="member" href="./cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="mem_p2">購物車</div>
                 </a>
             </nav>  
         </div>
-    </header>    
+    </header> 
+    
     <div class="banner">
         <div class="banner_photo">
             <img class="bn" src="./HomePage_Photo/banner_photo.jpg" alt="">
         </div>
         <div class="banner_word">
-            <p class="bw1">Light tomorrow</p>
-            <p class="bw2">with</p>
-            <p class="bw3">today.</p>
+            <h1 class="bw1">Light tomorrow</h1>
+            <h2 class="bw2">with</h2>
+            <h2 class="bw3">today.</h2>
         </div>
     </div>
     <br id="brand_intr">
@@ -56,77 +65,92 @@
     <br>    
     <div class="brand">
         <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="brand_story">
-                    <h2 class="brand_introduce" >品牌介紹</h2>
-                    <p class="brand_content">當我們開始踏上創立這個品牌的旅程時，我們心中懷抱著對自然和環境的尊重，以及對生活中美好、溫馨時刻的珍惜。這個品牌的誕生源於我們對地球的熱愛，以及對蠟燭藝術的熱情。</p>
-                    <br>
-                    <p class="brand_content">我們深信，每個蠟燭都應該是一個小小的藝術品。我們的蠟燭以天然的大豆蠟和環保燭芯製成，以確保您在點燃蠟燭的那一刻，可以享受到最純粹的光芒和香氛。</p>
-                    <br>
-                    <p class="brand_content">我們希望提供一種美好的蠟燭體驗，可以讓您在繁忙的日常生活中找到平靜和喜悅的方式。在此誠摯地邀請您一同加入我們的蠟燭之旅，為每一個特別時刻點綴出美好的回憶。</p>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="brand_story">
+                        <h2 class="brand_introduce" >品牌介紹</h2>
+                        <p class="brand_content">當我們開始踏上創立這個品牌的旅程時，我們心中懷抱著對自然和環境的尊重，以及對生活中美好、溫馨時刻的珍惜。這個品牌的誕生源於我們對地球的熱愛，以及對蠟燭藝術的熱情。</p>
+                        <br>
+                        <p class="brand_content">我們深信，每個蠟燭都應該是一個小小的藝術品。我們的蠟燭以天然的大豆蠟和環保燭芯製成，以確保您在點燃蠟燭的那一刻，可以享受到最純粹的光芒和香氛。</p>
+                        <br>
+                        <p class="brand_content">我們希望提供一種美好的蠟燭體驗，可以讓您在繁忙的日常生活中找到平靜和喜悅的方式。在此誠摯地邀請您一同加入我們的蠟燭之旅，為每一個特別時刻點綴出美好的回憶。</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="brand_cube1"></div>
-                <div class="brand_cube2"></div>
-                <div class="brand_photo">
-                    <img class="brand_pt" src="./HomePage_Photo/brand_photo.jpg" alt="">
+                <div class="col-12 col-md-6">
+                    <div class="brand_cube1"></div>
+                    <div class="brand_cube2"></div>
+                    <div class="brand_photo">
+                        <img class="brand_pt" src="./HomePage_Photo/brand_photo.jpg" alt="brand_photo">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
     </div>
     <br>
     <br>
     <div class="product">
         <h2 class="product_introduce">商品介紹</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4" id="product_card">
-                    <img class="product_photo" src="./HomePage_Photo/晨曦曙光.jpg" alt="">
-                    <p class="product_name">商品名稱:晨曦曙光</p>
+        <!-- <i class="fa-solid fa-chevron-left" ></i>
+        <i class="fa-solid fa-chevron-right"></i> -->
+        <div class="container" id="c">
+            <div class="row" id="r">
+                <div class="col-12 col-md-12" id="product_card">
+                    <img class="product_photo" src="./HomePage_Photo/晨曦曙光.jpg" alt="晨曦曙光">
+                    <p class="product_name">晨曦曙光</p>
                     <button class="pdbtn">
-                        <a class="shopbag2" href="">
-                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="">
-                        加入購物車</a>
-                    </button>
+                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
+                        加入購物車
+                    </button>  
                 </div>
-                <div class="col-12 col-md-4" id="product_card">
-                    <img class="product_photo" src="./HomePage_Photo/夜空星辰.jpg" alt="">
-                    <p class="product_name">商品名稱:夜空星辰</p>
+                <div class="col-12 col-md-12" id="product_card">
+                    <img class="product_photo" src="./HomePage_Photo/夜空星辰.jpg" alt="夜空星辰">
+                    <p class="product_name">夜空星辰</p>
                     <button class="pdbtn">
-                        <a class="shopbag2" href="">
-                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="">
-                        加入購物車</a>
-                    </button>
+                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
+                        加入購物車
+                    </button>                    
                 </div>
-                <div class="col-12 col-md-4" id="product_card">
-                    <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="">
-                    <p class="product_name">商品名稱:海洋寧靜</p>
+                <div class="col-12 col-md-12" id="product_card">
+                    <img class="product_photo" src="./HomePage_Photo/徒步山林.jpg" alt="徒步山林">
+                    <p class="product_name">徒步山林</p>
                     <button class="pdbtn">
-                        <a class="shopbag2" href="">
-                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="">
-                        加入購物車</a>
-                    </button>
+                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
+                        加入購物車
+                    </button>                    
+                </div>
+                <div class="col-12 col-md-12" id="product_card">
+                    <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="海洋寧靜">
+                    <p class="product_name">海洋寧靜</p>
+                    <button class="pdbtn">
+                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
+                        加入購物車
+                    </button>                    
+                </div>
+                <div class="col-12 col-md-12" id="product_card">
+                    <img class="product_photo" src="./HomePage_Photo/玫瑰之舞.jpg" alt="玫瑰之舞">
+                    <p class="product_name">玫瑰之舞</p>
+                    <button class="pdbtn">
+                        <img class="sbicon" src="./HomePage_Photo/Shop.png" alt="cart_icon">
+                        加入購物車
+                    </button>                    
                 </div>
             </div>
         </div>
     </div>
     <br>
+
     <footer>
         <div class="homefoot">
             <div class="container">
-                <div class="row">
+                <div class="row" id="ft_r">
                     <div class="col-12 col-md-6">
                         <div class="foot_function">
-                            <a class="foot_btn" href="">Top</a>
-                            <a class="foot_btn" href="">Story</a>
-                            <a class="foot_btn" href="">Product</a>
-                            <a class="foot_btn" href="">News</a>
-                            <a class="foot_btn" href="">About</a>
-                            <a class="foot_btn" href="">Q&A</a>
+                            <a class="foot_btn" id="back_to_top" href="#">Top</a>
+                            <a class="foot_btn" href="#brand_intr">Story</a>
+                            <a class="foot_btn" href="./product.html">Product</a>
+                            <a class="foot_btn" href="./news.html">News</a>
+                            <a class="foot_btn" href="./about.html">About</a>
+                            <a class="foot_btn" href="./Q&A.html">Q&A</a>
                         </div>
                         <div class="foot_information">
                             <p>Candleternity0702@gmail.com</p>
@@ -136,22 +160,25 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="foot_icon">
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
                                 <img class="ft_pt" src="./HomePage_Photo/facebook.png" alt="facebook">
                             </a>
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
                                 <img class="ft_pt" src="./HomePage_Photo/line.png" alt="line">
                             </a>
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
                                 <img class="ft_pt" src="./HomePage_Photo/instagram.png" alt="insragram">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="copyright">© Candleternity 2023 </p>
-            <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
+            <div class="cr_p">
+                <p class="copyright">© Candleternity 2023 </p>
+                <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
+            </div>
         </div>
     </footer> 
+    
 </body>
 </html>

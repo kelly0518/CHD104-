@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/grid.css">
-    <link rel="stylesheet" href="./CSS/about.css">
-
+    <link rel="stylesheet" href="./CSS/cart.css">
     <link rel="icon" href="./HomePage_Photo/icon3.ico" type="image/x-icon">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <script src="./JS/jquery-3.7.1.js"></script>
     <script src="./JS/index.js"></script>
 </head>
@@ -31,6 +28,7 @@
             </label>
             <nav class="function">
                 <a class="ft_t" href="#brand_intr">品牌介紹</a>
+                <!--scroll-behavior: smooth-->
                 <a class="ft_t" href="./product.html">商品介紹</a>
                 <a class="ft_t" href="./news.html">最新消息</a>
                 <a class="ft_t" href="./about.html">關於我們</a>
@@ -45,57 +43,99 @@
                 </a>
             </nav>  
         </div>
-    </header>
+    </header> 
 
-    <div class="aboutus">
-        <h2 class="aboutus_title">關於我們</h2>
+    <div class="cart">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12">
-                    <div class="about_photo1">
-                        <img class="about_pt1" src="./about_photo/about us 1.jpg" alt="">
+                    <div class="process">
+                        <div class="circle">
+                            <p class="number">1</p>
+                            <p class="pr_p">購物車</p>
+                        </div>
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right-long" id="arrow"></i>
+                        </div>
+                        <div class="circle">
+                            <p class="number">2</p>
+                            <p class="pr_p">填寫資料</p>
+                        </div>
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right-long" id="arrow"></i>
+                        </div>
+                        <div class="circle">
+                            <p class="number">3</p>
+                            <p class="pr_p">訂單確認</p>
+                        </div>
                     </div>
-                    <div class="about_photo2">
-                        <img class="about_pt2" src="./about_photo/about us 4.jpg" alt="">
+                    <div class="cart_content" id="item_list">
+                        <h2 class="cart_title">購物車內容</h2>
+                        <div class="cart_card">
+                            <img src="./HomePage_Photo/晨曦曙光.jpg" alt="">
+                            <p class="product_name">商品名稱: 晨曦曙光</p>
+                            <div class="product_n">數量  
+                                <button class="minus" data-product-id="sun">-</button>
+                                <div class="num" data-product-id="sun">1</div>
+                                <button class="plus" data-product-id="sun">+</button>
+                            金額: NT$599</div> 
+                        </div>
+                        <div class="cart_card">
+                            <img src="./HomePage_Photo/海洋寧靜.jpg" alt="">
+                            <p class="product_name">商品名稱: 海洋寧靜</p>
+                            <div class="product_n">數量  
+                                <button class="minus" data-product-id="ocean">-</button>
+                                <div class="num" data-product-id="ocean">1</div>
+                                <button class="plus"  data-product-id="ocean">+</button>
+                                金額: NT$599</div>
+                        </div>
+                    </div>
+                    <div class="cart_function">
+                        <span class="cart_ft">優惠券(碼) </span>
+                        <span class="cart_ft">配送方式 
+                            <select name="" id="
+                            transport">
+                                <option>請選擇配送方式</option>
+                                <option>7-11</option>
+                                <option>全家</option>
+                                <option>宅配</option>
+                            </select>
+                        </span>
+                        <span class="cart_ft">付款方式 
+                            <select name="" id="">
+                                <option>請選擇配送方式</option>
+                                <option>7-11貨到付款</option>
+                                <option>全家貨到付款</option>
+                                <option>宅配貨到付款</option>
+                                <option>信用卡線上付款</option>
+                            </select>
+                        </span>
+                        <span class="cart_ft">購買人資訊 
+                            <select name="" id="">
+                                <option>請選擇配送方式</option>
+                                <option>7-11貨到付款</option>
+                                <option>全家貨到付款</option>
+                                <option>宅配貨到付款</option>
+                                <option>信用卡線上付款</option>
+                            </select>
+                        </span>
+                        <p class="cart_p">總金額:
+                            <div class="total_num"></div>
+                        </p>
+                        <button class="buy">確認結帳</button>
                     </div>
                 </div>
-                <h3 class="aboutus_h">品牌名稱的由來</h3>
-                <div class="col-12 col-md-12" id="about_card">
-                    <div class="about_content">
-                        <p class="aboutus_p">Candleternity的品牌名稱融合了「蠟燭」（Candle）和「永恆」（Eternity），象徵著我們對永續發展和環保的承諾。
-                        <br>
-                        <br>
-                        我們的製程不僅注重環保，更融入了對簡約美學的熱愛。從設計到製作，每一個步驟都經過精心打磨，確保在享受美好的燭光時，也在保護地球。我們認為，環保不應該是一種選擇，而應該成為一種生活的本能。</p>
-                    </div>          
-                </div>
-                <h3 class="aboutus_h">我們的承諾</h3>
-                <div class="col-12 col-md-12" id="about_card">
-                    <div class="about_content">
-                        <p class="aboutus_p">為響應環保，我們承諾顧客每購買一顆Candleternity的蠟燭，就捐出商品1%的金額給相關環保團體 。</p>
-                    </div>
-                    <div class="about_photo3">
-                        <img class="about_pt3" src="./about_photo/about us 6.jpg" alt="">
-                    </div>
-                </div>
-                <h3 class="aboutus_h">加入我們的旅程</h3>
-                <div class="col-12 col-md-12" id="about_card">
-                    <div class="about_photo3">
-                        <img class="about_pt3" src="./about_photo/about us 5.jpg" alt="">
-                    </div> 
-                    <div class="about_content">
-                        <p class="aboutus_p">Candleternity的目標是成為環保蠟燭的代表品牌，引領簡約、優雅和環保的結合。加入我們的旅程，一同點燃對美好生活的追求，同時為地球的未來盡一份心力。感謝您選擇Candleternity，與我們共創一個更美好的明天。</p>
-                    </div>
-                </div>
-            </div>    
+            </div>
         </div>
     </div>
+    
     <footer>
         <div class="homefoot">
             <div class="container">
                 <div class="row" id="ft_r">
                     <div class="col-12 col-md-6">
                         <div class="foot_function">
-                            <a class="foot_btn" href="./index.html">Top</a>
+                            <a class="foot_btn" href="#">Top</a>
                             <a class="foot_btn" href="#brand_intr">Story</a>
                             <a class="foot_btn" href="./product.html">Product</a>
                             <a class="foot_btn" href="./news.html">News</a>
@@ -135,6 +175,6 @@
                 <!-- <p class="copyright">僅供學習、展示用。</p> -->
             </div>
         </div>
-    </footer> 
+    </footer>
 </body>
 </html>

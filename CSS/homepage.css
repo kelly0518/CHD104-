@@ -2,27 +2,37 @@
     --color_brown: #89756A;
     --color_rose: #E6BCB5;
     --color_font: #423731;
+    --color_milktea: #EDD6C9;
     font-family:'Noto Sans TC', sans-serif;
-    /* scroll-behavior: smooth; */
-    background: url(../HomePage_Photo/bg.png),rgba(246,233,230,0.1)
+    scroll-behavior: smooth;
+    background: url(../HomePage_Photo/background2.png),rgba(246,233,230,0.5);
 }
 
 .hometitle{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 10px;
-    background-color: #fff;
+    padding: 10px 0px;
+    background-color: rgba(255,255,255,0.4);
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
+    transition: 1s;
 }
+
+.not_top{
+    background-color: #ffff;
+    transition: 1s;
+}
+
 .logo{
     display: block;  
 }
 .logo_photo{
     margin-left: 20px;
+    width: 120px;
+    height: 50px;
 }
 .logo_a{
     text-decoration: none;
@@ -31,14 +41,15 @@
     display: none;
 }
 .hbtn{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: #E6BCB5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 15px;
 }
+
 @media (width>=768px) {
     .hbtn{
         display: none;
@@ -48,34 +59,68 @@
 .hbtn span{
     width: 80%;
     height: 2px;
-    margin: 3px auto;
+    margin: 5px auto;
     background-color: #fff;
+    transition-duration: 0.5s;
 }
+
+
 .function{
     margin-top: 15px;
 }
 @media (width<768px) {
-    .function{
+    .function {
     display: none;
     width: 100%;
     background-color: #EDD6C9;
     } 
+    
 }
 .member{
     border:2px solid #B69D8F;
     border-radius: 20px;
+
 }
+.member:hover{
+    /* border:2px solid #ffff; */
+    color:#ffff;
+    background-color: #B69D8F;
+}
+.fa-solid::before{
+    color:#B69D8F;
+    font-size: 20px;
+}
+.member:hover .fa-solid::before{
+    color: #ffff;
+}
+
+
+
+.mem_p{
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: -3px;
+}
+.mem_p2{
+    display: inline-block;
+    margin-left: 25px;
+}
+
 .homeicon{
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
 }
 .function a{
     text-decoration: none;
     color:#89756A;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
-    padding: 5px 10px;
-    margin: 0px 15px 0px 0px;
+    padding: 5px 8px;
+    margin: 0px 10px 0px 0px;
+}
+.function .ft_t:hover{
+    color: var(--color_rose);
+    font-weight: 500;
 }
 @media (width<768px) {
     .function a{
@@ -89,10 +134,22 @@
     #menu:checked ~ .hometitle .function{
         display: block;
     }
+    #menu:checked ~ .hometitle .hbtn{
+        background-color: var(--color_brown);
+    }
+    #menu:checked ~ .hometitle .hbtn span:first-child{
+        width: 100%;
+        transform: translateX(0%) translateY(250%)rotate(45deg);
+    }
+    #menu:checked ~ .hometitle .hbtn span:last-child{
+        width: 100%;
+        transform: translateX(0%) translateY(-250%)rotate(-45deg);
+    }
     .function a + a{
     border-top: 1px solid #fff;
     }
 }
+
 
 .banner{
     display: flex;
@@ -102,17 +159,16 @@
 }
 .banner_photo{
     border-radius: 0px 0px 100px 0px;
-    aspect-ratio: 1000/480;
     width: 80%;
+    aspect-ratio: 1000/480;
+    overflow: hidden;
 }
 .bn{
-    object-fit: fill;
     width: 100%;
     height: 100%;
-    border-radius: 0px 0px 100px 0px;
-    /* object-position: center 70%; */
-    /* object-fit: cover;
-    aspect-ratio: 1000/480; */
+    /* border-radius: 0px 0px 100px 0px; */
+    object-position: center 70%;
+    object-fit: cover;
 }
 .banner_word{
     font-size: 50px;
@@ -123,7 +179,7 @@
 }
 @media (width < 1200px) {
     .banner_word{
-        font-size: clamp(30px, 4.16666vw, 50px);
+        font-size: clamp(23px, 4.16666vw, 50px);
     }
 }
 .bw1{
@@ -131,6 +187,7 @@
     left: 50%;
     bottom: 95%;
 }
+
 
 .bw2{
     position: absolute;
@@ -143,9 +200,10 @@
     bottom: 65%;
 }
 
+
 .brand_story{
     text-align: left;
-    margin-left: 20%;
+    margin-left: 100px;
     margin-top: 5%;
     font-family:'Noto Sans TC', sans-serif;
     color: var(--color_font);
@@ -162,14 +220,15 @@
     margin-right: 20%;
 }
 .brand_photo{
-    aspect-ratio: 450/650;
+    aspect-ratio: 400/600;
     border-radius: 0px 0px 0px 100px;
-    margin-right: 10%;
+    margin-right: 100px;
     margin-top: 5%;
+    overflow: hidden;
 }
+
 .brand_pt{
-    object-fit: cover;
-    /* overflow: hidden; */
+    /* object-fit: cover; */
     border-radius: 0px 0px 0px 100px;
     width: 100%;
     height: 100%;
@@ -188,7 +247,32 @@
     position: absolute;
     right: 98%;
 }
-
+@media (width<768px) {
+    .brand_cube1{
+        left:0;
+        height: 500px;
+        width: 10px;
+    }
+    .brand_cube2{
+        right:0;
+        height: 500px;
+        width: 10px;
+    }
+    /* .brand_content{
+        margin-right: 0%;        
+    } */
+    /* .brand_story{
+        margin-right: 0%; 
+    } */
+    /* .brand_photo{
+        margin-right: 0%;
+    } */
+    /* .brand_pt{
+        margin-right: 0%;
+        width: 280px;
+        height: 420px;
+} */
+}
 .product{
     margin-top: 5%;
     font-family:'Noto Sans TC', sans-serif;
@@ -199,16 +283,55 @@
     text-align: center;
     letter-spacing: 4px;
 }
-.row{
-    margin: 30px;
+#c{
+    position:relative;
+    width: 990px;
+    height:350px;
+    margin: auto;
+    /* background-color: #bfbfef; */
+    overflow: hidden;
+}
+#r{
+    margin-top: 30px;
     text-align: center;
-    /* gap: 2; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    animation: run 15s infinite;
+}
+@media (width<768px) {
+    #c{
+        width: 330px;
+    }
+    #r{
+        animation: run2 15s infinite;
+    }
 }
 #product_card{
-    margin-top: 20px;
+    float: left;
+    width: 330px;
+    height:310px;
+    /* border: 1px solid black; */
+    
+}
+
+@keyframes run {
+    0%{left: 0px;}
+	20%{left: -330px;}
+	50%{left: -660px;}
+	70%{left: -330px;}
+	90%{left: 0px;}
+}
+@keyframes run2 {
+    0%{left: 0px;}
+	20%{left: -330px;}
+	50%{left: -660px;}
+	70%{left: -990px;}
+	90%{left: -1320px;}
 }
 .product_photo{
-    width: 100%;
+    width: 300px;
     height: 200px;
     /* aspect-ratio: 450/200; */
     object-fit: cover;
@@ -216,28 +339,42 @@
     border-radius: 0px 0px 80px 0px;
 }
 .product_name{
-    font-size: 16px;
+    font-size: 20px;
     color: var(--color_font);
     margin-top: 20px;
     margin-bottom: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
 }
 .pdbtn{
     justify-content: center;
-    background-color: #ffff;
-    border: 1px solid var(--color_brown);
+    background-color: #0000;
+    border: 1.5px solid var(--color_brown);
     border-radius: 6px;
     padding: 5px 10px;
-}
-.shopbag2{
-    text-decoration: none;
     color: var(--color_font); 
     font-size: 16px;
 }
+
 .sbicon{
     width: 16px;
     height: 16px;
 }
+
+.fa-solid{
+    color: #000000;
+    position: absolute;
+}
+.fa-chevron-left{
+    font-size: 25px;
+    margin-top: 12%;
+    margin-left: 3%;
+}
+.fa-chevron-right{
+    font-size: 25px;
+    margin-left: 96%;
+    margin-top: 12%;
+}
+
 
 .homefoot{
     font-size: 16px;
@@ -246,33 +383,61 @@
     background-color: var(--color_rose);
 }
 .foot_function{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-top: 10px;
+    text-align: left;
+    
 }
 .foot_btn{
     text-decoration: none;
     color: var(--color_font);
-    margin-right: 5px;
-    padding-right: 15px;
-}    
+    margin: 0px 3px;
+    
+} 
+.foot_btn:hover{
+    color: #ffff;
+    font-weight: 500;
+}   
+
 .foot_information{
-    line-height: 25px;
+    line-height: 35px;
     text-align: left;
-    margin-left: 70px;
 }
 .foot_icon{
     margin-top: 10px; 
+    text-align: right;
 }
+@media (width<768px) {
+    .foot_icon{
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    .copyright{
+        margin-left: 65px;
+        width: 290px;
+    }
+}
+
 .ft_ic{
-    padding-right: 15px;
+    padding-right: 20px;
     text-decoration: none;
 }
 .ft_pt{
     width: 25px;
     height: 25px;
 }
+#ft_r{
+    margin-left: 20px;
+}
+
+.cr_p{
+    margin-top: -30px;
+}
 .copyright{
+    margin-left: auto;
+    margin-right: auto;
     font-size: 14px;
     text-align: center;
-    line-height: 25px;
+    line-height: 30px;
+    /* border: 1px solid black; */
 }

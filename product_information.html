@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="./CSS/grid.css">
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/product_information.css">
+
+    <link rel="icon" href="./HomePage_Photo/icon3.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <script src="./JS/index.js"></script>
 </head>
 <body>
     <header>
@@ -15,7 +22,7 @@
         <div class="hometitle">
             <div class="logo">
                 <a class="logo_a" href="./index.html">
-                    <img class="logo_photo" src="./HomePage_Photo/LOGO2.png" alt="Candleternity">
+                <img class="logo_photo" src="./HomePage_Photo/logo.svg" alt="Candleternity">
                 </a>
             </div>
             <label for="menu" class="hbtn">
@@ -23,19 +30,19 @@
                 <span></span>
             </label>
             <nav class="function">
-                <a href="#brand_intr">品牌介紹</a>
+                <a class="ft_t" href="#brand_intr">品牌介紹</a>
                 <!--scroll-behavior: smooth-->
-                <a href="./product.html">商品介紹</a>
-                <a href="./news.html">最新消息</a>
-                <a href="./about.html">關於我們</a>
-                <a href="">常見問題</a> 
-                <a class="member" href="">
-                    <img class="homeicon" src="./HomePage_Photo/people.png" alt="">
-                    會員登入
+                <a class="ft_t" href="./product.html">商品介紹</a>
+                <a class="ft_t" href="./news.html">最新消息</a>
+                <a class="ft_t" href="./about.html">關於我們</a>
+                <a class="ft_t" href="./Q&A.html">常見問題</a> 
+                <a class="member" href="./member.html">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="mem_p">會員登入</div>
                 </a>
-                <a class="member" href="">
-                    <img class="homeicon" src="./HomePage_Photo/Shop.png" alt="">
-                    購物車
+                <a class="member" href="./cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="mem_p2">購物車</div>
                 </a>
             </nav>  
         </div>
@@ -43,33 +50,35 @@
     <div class="product_information">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" id="product_card">
                     <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="">
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" id="product_card">
                     <p class="product_name">商品名稱: 海洋寧靜</p>
                     <p class="product_name">價格: NT$599</p>
-                    <p class="product_name">選擇數量:</p>
-                    <button class="btn_num">
-                        <p>-</p>
-                        <p>1</p>
-                        <p>+</p>
-                    </button>
-                    <button class="btn_sh">
-                        <a class="btn_a" href="">
-                            <img class="btn_icon" src="./HomePage_Photo/cart.png" alt="">
+                    <div class="product_name">
+                        選擇數量:
+                        <button class="minus" data-product-id="ocean">-</button>
+                        <div class="num" data-product-id="ocean">1</div>
+                        <button class="plus" data-product-id="ocean">+</button>
+                    </div>
+                    <div class="btn_a">
+                        <button class="btn_cart" href="">
+                            <img class="btn_icon" src="./HomePage_Photo/cart.png" alt="加入購物車">
                             加入購物車
-                        </a>
-                    </button>
-                    <button class="btn_sh">
-                        <a class="btn_a" href="">
-                            <img class="btn_icon" src="./HomePage_Photo/bag.png" alt="">
+                        </button>
+                        <a class="btn_buy" href="./cart.html">
+                            <img class="btn_icon" src="./HomePage_Photo/bag.png" alt="立即購買">
                             立即購買
                         </a>
-                    </button>
+                    </div>
                 </div>
             </div>
-            <div class="line"></div>    
+            <div class="line"></div>
+            <div class="in_cart">
+                <i class="fa-regular fa-circle-check" id="tick"></i>
+                <p class="in_cart_p">已加入購物車</p>
+            </div>    
         </div>
         </div>
         <h2 class="product_introduce">商品介紹</h2>
@@ -79,10 +88,10 @@
                     <p class="pd_p">此款蠟燭的香氣主要由海洋風味、淡淡的椰子和清新的海風調和而成，它能為您帶來寧靜放鬆和一種沐浴在海洋波浪聲中的感覺。</p>
                 </div>
                 <div class="col-12 col-md-6" id="product_card">
-                    <img class="product_photo2" src="./HomePage_Photo/product.jpg" alt="">
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
                 </div>
                 <div class="col-12 col-md-6" id="product_card">
-                    <img class="product_photo2" src="./HomePage_Photo/product.jpg" alt="">
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
                 </div>
                 <div class="col-12 col-md-6" id="product_card">
                     <p class="pd_p">調香細節：
@@ -96,7 +105,7 @@
                         高度：15cm</p>
                 </div>
                 <div class="col-12 col-md-6" id="product_card">
-                    <img class="product_photo2" src="./HomePage_Photo/product.jpg" alt="">
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -105,15 +114,15 @@
     <footer>
         <div class="homefoot">
             <div class="container">
-                <div class="row">
+                <div class="row" id="ft_r">
                     <div class="col-12 col-md-6">
                         <div class="foot_function">
-                            <a class="foot_btn" href="">Top</a>
-                            <a class="foot_btn" href="">Story</a>
-                            <a class="foot_btn" href="">Product</a>
-                            <a class="foot_btn" href="">News</a>
-                            <a class="foot_btn" href="">About</a>
-                            <a class="foot_btn" href="">Q&A</a>
+                            <a class="foot_btn" href="./index.html">Top</a>
+                            <a class="foot_btn" href="#brand_intr">Story</a>
+                            <a class="foot_btn" href="./product.html">Product</a>
+                            <a class="foot_btn" href="./news.html">News</a>
+                            <a class="foot_btn" href="./about.html">About</a>
+                            <a class="foot_btn" href="./Q&A.html">Q&A</a>
                         </div>
                         <div class="foot_information">
                             <p>Candleternity0702@gmail.com</p>
@@ -123,22 +132,31 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="foot_icon">
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-square-facebook"></i> -->
                                 <img class="ft_pt" src="./HomePage_Photo/facebook.png" alt="facebook">
                             </a>
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-line" id="ln"></i> -->
                                 <img class="ft_pt" src="./HomePage_Photo/line.png" alt="line">
                             </a>
-                            <a class="ft_ic" href="">
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-instagram"></i> -->
                                 <img class="ft_pt" src="./HomePage_Photo/instagram.png" alt="insragram">
                             </a>
                         </div>
+                        <!-- <div class="logo_icon">
+                            <img class="logo_ic" src="./HomePage_Photo/logo_circle.svg" alt="">
+                        </div> -->
                     </div>
                 </div>
             </div>
-            <p class="copyright">© Candleternity 2023 </p>
-            <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
+            <div class="cr_p">
+                <p class="copyright">© Candleternity 2023 </p>
+                <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
+                <!-- <p class="copyright">僅供學習、展示用。</p> -->
+            </div>
         </div>
-    </footer>
+    </footer>  
 </body>
 </html>

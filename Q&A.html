@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Q&A</title>
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/grid.css">
-    <link rel="stylesheet" href="./CSS/about.css">
+    <link rel="stylesheet" href="./CSS/Q&A.css">
 
     <link rel="icon" href="./HomePage_Photo/icon3.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <script src="./JS/jquery-3.7.1.js"></script>
     <script src="./JS/index.js"></script>
 </head>
@@ -30,7 +29,8 @@
                 <span></span>
             </label>
             <nav class="function">
-                <a class="ft_t" href="#brand_intr">品牌介紹</a>
+                <a class="ft_t" href="./index.html/#brand_intr">品牌介紹</a>
+                <!--scroll-behavior: smooth-->
                 <a class="ft_t" href="./product.html">商品介紹</a>
                 <a class="ft_t" href="./news.html">最新消息</a>
                 <a class="ft_t" href="./about.html">關於我們</a>
@@ -45,50 +45,31 @@
                 </a>
             </nav>  
         </div>
-    </header>
+    </header> 
 
-    <div class="aboutus">
-        <h2 class="aboutus_title">關於我們</h2>
+    <div class="qa_content">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12">
-                    <div class="about_photo1">
-                        <img class="about_pt1" src="./about_photo/about us 1.jpg" alt="">
-                    </div>
-                    <div class="about_photo2">
-                        <img class="about_pt2" src="./about_photo/about us 4.jpg" alt="">
-                    </div>
+                    <h2 class="qa_title">常見問題</h2>
+                    <ul class="qa_sort">
+                        <li class="qa_item">退貨換貨</li>
+                        <li class="qa_item">購物流程</li>
+                        <li class="qa_item">會員點數</li>
+                        <li class="qa_item">會員制度</li>
+                    </ul>
+                    <div class="qa_container"></div>
+                    <!-- <div class="qa_card">
+                        <p class="qa_q">Q:</p>
+                        <p class="qa_a">如何提出退換貨要求？</p>
+                        <p class="qa_q">A:</p>
+                        <p class="qa_a">您可以在我們的網站上的"訂單歷史"頁面中找到相應的訂單，然後點擊“申請退換貨”按鈕，按照指示填寫相關信息。</p>
+                    </div> -->
                 </div>
-                <h3 class="aboutus_h">品牌名稱的由來</h3>
-                <div class="col-12 col-md-12" id="about_card">
-                    <div class="about_content">
-                        <p class="aboutus_p">Candleternity的品牌名稱融合了「蠟燭」（Candle）和「永恆」（Eternity），象徵著我們對永續發展和環保的承諾。
-                        <br>
-                        <br>
-                        我們的製程不僅注重環保，更融入了對簡約美學的熱愛。從設計到製作，每一個步驟都經過精心打磨，確保在享受美好的燭光時，也在保護地球。我們認為，環保不應該是一種選擇，而應該成為一種生活的本能。</p>
-                    </div>          
-                </div>
-                <h3 class="aboutus_h">我們的承諾</h3>
-                <div class="col-12 col-md-12" id="about_card">
-                    <div class="about_content">
-                        <p class="aboutus_p">為響應環保，我們承諾顧客每購買一顆Candleternity的蠟燭，就捐出商品1%的金額給相關環保團體 。</p>
-                    </div>
-                    <div class="about_photo3">
-                        <img class="about_pt3" src="./about_photo/about us 6.jpg" alt="">
-                    </div>
-                </div>
-                <h3 class="aboutus_h">加入我們的旅程</h3>
-                <div class="col-12 col-md-12" id="about_card">
-                    <div class="about_photo3">
-                        <img class="about_pt3" src="./about_photo/about us 5.jpg" alt="">
-                    </div> 
-                    <div class="about_content">
-                        <p class="aboutus_p">Candleternity的目標是成為環保蠟燭的代表品牌，引領簡約、優雅和環保的結合。加入我們的旅程，一同點燃對美好生活的追求，同時為地球的未來盡一份心力。感謝您選擇Candleternity，與我們共創一個更美好的明天。</p>
-                    </div>
-                </div>
-            </div>    
+            </div>
         </div>
     </div>
+
     <footer>
         <div class="homefoot">
             <div class="container">
@@ -138,3 +119,6 @@
     </footer> 
 </body>
 </html>
+
+
+

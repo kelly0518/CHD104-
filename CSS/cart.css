@@ -2,9 +2,10 @@
     --color_brown: #89756A;
     --color_rose: #E6BCB5;
     --color_font: #423731;
+    --color_milktea: #EDD6C9;
     font-family:'Noto Sans TC', sans-serif;
-    /* scroll-behavior: smooth; */
-    background: url(../HomePage_Photo/background2.png),rgba(246,233,230,0.5);
+    scroll-behavior: smooth;
+    background: url(../HomePage_Photo/background2.png),rgba(246,233,230,0.5)
 }
 
 .hometitle{
@@ -145,70 +146,128 @@
     }
 }
 
-.news{
-    margin-top: 130px;
-    color: var(--color_font);
+.cart{
+    margin-top: 80px;
+    margin-bottom: 40px;
     position: relative;
+    color: var(--color_font);
 }
-.news_title{
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 4px;
-}
-#news_card{
+
+.process {
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 40px;  
-    padding-left: 10%;  
-    /* padding-right: 8%; */
+    flex-direction: row;
+    margin: 60px auto;
+    justify-content: center;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    font-size: 16px;
+    position: absolute;
+    top:28%;
+}
+
+#arrow{
+    font-size: 20px;
+    margin: 10px 20px;
+}
+
+.pr_p {
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    position: absolute;
+    top:120%;
+}
+.cart_content{
+    /* border: 1px solid red; */
+}
+.cart_title{
+    font-size: 22px;
+    color: var(--color_font);
+    margin-left: 10%;
     
+}
+
+.cart_card{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.cart_card img{
+    width: 100px;
+    height: 60px;
+    border-radius: 0px 0px 20px 0px;
+    margin: auto;
+}
+.product_name{
+    display: inline-block;
+    /* width: 300px; */
+    margin-left: 20px;
+    margin: auto;
+}
+.product_n{
+    display: inline-block;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.num{
+    display: inline-block;
+}
+
+
+.cart_function{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    /* border: 1px solid red; */
 }
 @media (width<768px) {
-    #news_card{
-        display: block;
+    .cart_function{
+        padding-left: 0;
+    }
+    .cart_title{
+        margin-left: 0;        
     }
 }
-.news_photo{
-    width: 400px;
-    height: 240px;
-    object-fit: cover;
-    object-position: center 30%;
-    border-radius: 0px 0px 80px 0px;
-    margin-right: 60px;
-    
+.cart_ft{
+    display: inline-block;
+    margin-top: 40px;
 }
-
-
-.news_a{
-    text-decoration: none;
+.cart_p{
+    margin-top: 40px;
 }
-.news_content{
-    margin-right: 10%;
-    margin-top: 20px;
+.buy{
+    font-size: 18px;
+    font-weight: 600;
+    color:var(--color_font);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border: 1.5px solid var(--color_brown);
+    border-radius: 10px;
+    background-color: #0000;
+    width: 450px;
+    height: 40px;
 }
-.news_p{
-    font-size: 16px;
-    color: var(--color_font);
-    letter-spacing: 2px;
-    margin-top: 20px;
-    line-height: 20px;
+.buy:hover{
+    color:#ffff;
+    border: 1.5px solid #ffff;
+    background-color: var(--color_brown);
 }
-.line{
-    width: 1200px;
-    margin-left: 10%;
-    margin-right: 8%;
-    border: 0.5px solid var(--color_brown);
-}
-.more{
-    position: absolute;
-    bottom: 10px;
-    right: 8%;
-    width: 30px;
-    height: 20px;
-    border: 1px solid var(--color_milktea);
-}
-
-
 
 .homefoot{
     font-size: 16px;
@@ -220,17 +279,17 @@
     margin-bottom: 15px;
     margin-top: 10px;
     text-align: left;
-    
 }
 .foot_btn{
     text-decoration: none;
     color: var(--color_font);
     margin: 0px 3px;
-    
+    /* padding-right: 12px; */
+    /* border: 1px solid black; */
 } 
 .foot_btn:hover{
-    color: #ffff;
-    font-weight: 500;
+    color: var(--color_milktea);
+    font-weight: 600;
 }   
 
 .foot_information{
@@ -240,6 +299,7 @@
 .foot_icon{
     margin-top: 10px; 
     text-align: right;
+    
 }
 @media (width<768px) {
     .foot_icon{
@@ -253,7 +313,7 @@
 }
 
 .ft_ic{
-    padding-right: 20px;
+    padding-right: 15px;
     text-decoration: none;
 }
 .ft_pt{
@@ -261,17 +321,38 @@
     height: 25px;
 }
 #ft_r{
-    margin-left: 20px;
+    margin-left: 30px;
 }
+/* #ln{
+    font-size: 22px;
+} */
 
+/* .fa-brands{
+    font-size: 25px;
+    color: #000000;
+} */
+
+
+.logo_icon{
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: -50px;
+}
+@media (width<768px) {
+    .logo_icon{
+        text-align: left;
+    }
+    
+}
+.logo_ic{
+    width: 100px;
+    height: 100px;
+}
 .cr_p{
     margin-top: -30px;
 }
 .copyright{
-    margin-left: auto;
-    margin-right: auto;
     font-size: 14px;
     text-align: center;
     line-height: 30px;
-    /* border: 1px solid black; */
 }

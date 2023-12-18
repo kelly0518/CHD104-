@@ -78,12 +78,12 @@
                         <p class="in_cart_p">已加入購物車</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6" id="product_card">
+                <div class="col-12 col-md-6 product_card" >
                     <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="">
                 </div>
-                <div class="col-12 col-md-6" id="product_card">
-                    <p class="product_name">商品名稱: 海洋寧靜</p>
-                    <p class="product_name">價格: NT$599</p>
+                <div class="col-12 col-md-6 product_card" >
+                    <p class="product_name js_product_name">商品名稱: 海洋寧靜</p>
+                    <p class="product_name js_product_price">價格: NT$599</p>
                     <div class="product_name">
                         選擇數量:
                         <button class="minus" data-product-id="ocean">-</button>
@@ -109,27 +109,27 @@
         <h2 class="product_introduce">商品介紹</h2>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6" id="product_card">
+                <div class="col-12 col-md-6 product_card" >
                     <p class="pd_p">此款蠟燭的香氣主要由海洋風味、淡淡的椰子和清新的海風調和而成，它能為您帶來寧靜放鬆和一種沐浴在海洋波浪聲中的感覺。</p>
                 </div>
-                <div class="col-12 col-md-6" id="product_card">
+                <div class="col-12 col-md-6 product_card" >
                     <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
                 </div>
-                <div class="col-12 col-md-6" id="product_card">
+                <div class="col-12 col-md-6 product_card" >
                     <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
                 </div>
-                <div class="col-12 col-md-6" id="product_card">
+                <div class="col-12 col-md-6 product_card" >
                     <p class="pd_p">調香細節：
                         主調：清新的海風、椰子
                         中調：柑橘、茉莉花
                         基調：檀香、礦物氣味</p>
                 </div>
-                <div class="col-12 col-md-6" id="product_card">
+                <div class="col-12 col-md-6 product_card" >
                     <p class="pd_p">尺寸：
                         直徑：10cm
                         高度：15cm</p>
                 </div>
-                <div class="col-12 col-md-6" id="product_card">
+                <div class="col-12 col-md-6 product_card" >
                     <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
                 </div>
             </div>
@@ -183,5 +183,55 @@
             </div>
         </div>
     </footer>  
+    <!-- 在商品頁面上的 JavaScript 代碼 -->
+<script>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var addToCartButtons = document.querySelectorAll('.js_btn_cart');
+
+    addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            // 獲取商品信息
+            var productCard = button.closest('.product_card');
+            var productNameElement = productCard.querySelector('.js_product_name');
+            var productPriceElement = productCard.querySelector('.js_product_price');
+
+            if (productNameElement && productPriceElement) {
+                var productName = productNameElement.innerText;
+                var productPrice = productPriceElement.innerText;
+
+                // 創建或從localStorage中獲取購物車項目
+                var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+                // 檢查項目是否已經在購物車中
+                var existingItem = cartItems.find(item => item.name === productName);
+
+                if (existingItem) {
+                    // 如果項目存在，增加數量
+                    existingItem.quantity++;
+                } else {
+                    // 如果項目不存在，將其添加到購物車
+                    var cartItem = {
+                        name: productName,
+                        price: productPrice,
+                        quantity: 1
+                    };
+
+                    cartItems.push(cartItem);
+                }
+
+                // 將更新後的購物車項目保存到localStorage
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            } else {
+                console.error('未找到商品信息');
+            }
+        });
+    });
+});
+
+    </script>
+    
+    
 </body>
 </html>

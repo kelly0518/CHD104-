@@ -203,31 +203,31 @@ $(function(){
 // }
 
 
-function $id(id){
-    return document.getElementById(id);
-}
+// function $id(id){
+//     return document.getElementById(id);
+// }
 
-function addSpot(){
-    let item_list = $id("item_list");
-    let buy = $id("buy");
-    let cart_card = document.getElementsByClassName("cart_card")[0];
-    let newCartCard = cart_card.cloneNode(true);
+// function addSpot(){
+//     let item_list = $id("item_list");
+//     let buy = $id("buy");
+//     let cart_card = document.getElementsByClassName("cart_card")[0];
+//     let newCartCard = cart_card.cloneNode(true);
 
-    newCartCard.style.display = "block";
-    newCartCard.getElementsbyTagname("minus")[0].onclick = removeSpot;
-    item_list.insertBefore(newCartCard, buy);
-}
+//     newCartCard.style.display = "block";
+//     newCartCard.getElementsbyTagname("minus")[0].onclick = removeSpot;
+//     item_list.insertBefore(newCartCard, buy);
+// }
 
-function removeSpot(e){
-    let minus = e.target;
-    $id("item_list").removeChild(miuns.parentNode);
-}
+// function removeSpot(e){
+//     let minus = e.target;
+//     $id("item_list").removeChild(miuns.parentNode);
+// }
 
-window.addEventListener("input",function(){
-    $id(".btn_buy").onclick = addSpot;
+// window.addEventListener("input",function(){
+//     $id(".btn_buy").onclick = addSpot;
 
-    document.querySelector(".minus").onclick = removeSpot;
-})
+//     document.querySelector(".minus").onclick = removeSpot;
+// })
 
 
 // $(function(){

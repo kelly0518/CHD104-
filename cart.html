@@ -40,6 +40,31 @@
             renderCartItems(storedCartItems);
         }
     });
+    cartContent.addEventListener('click', function (event) {
+        var target = event.target;
+
+        if (target.classList.contains('minus') || target.classList.contains('plus')) {
+            var productId = target.getAttribute('data-product-id');
+            var action = target.classList.contains('minus') ? 'decrease' : 'increase';
+
+            // 更新商品數量
+            updateCartItemQuantity(productId, action);
+
+            // 重新渲染購物車內容
+            renderCartItems(storedCartItems);
+
+            // 判斷是否需要隱藏商品卡片
+            if (action === 'decrease') {
+                var cartItem = storedCartItems.find(item => item.productId === productId);
+                if (cartItem.quantity === 0) {
+                    var productCard = document.querySelector(`.product_card[data-product-id="${productId}"]`);
+                    if (productCard) {
+                        productCard.remove(); // 移除商品卡片
+                    }
+                }
+            }
+        }
+    });
 });
 
 function updateCartItemQuantity(productId, action) {

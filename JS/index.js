@@ -5,13 +5,13 @@ $(function(){
         let scroll_top = Math.round($(this).scrollTop())
 
         if(scroll_top >= 200){
-            $('.hometitle').addClass('not_top')            
+            $('.hometitle').addClass('not_top');            
         }else{
-            $('.hometitle').removeClass('not_top')
+            $('.hometitle').removeClass('not_top');
         }
         // console.log(scroll_top)
-})
-})
+    });
+});
 
 $(function(){
     let $win = $(window);

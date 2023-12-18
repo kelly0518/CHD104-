@@ -30,13 +30,13 @@
                 <span></span>
             </label>
             <nav class="function">
-                <a class="ft_t" href="#brand_intr">品牌介紹</a>
+                <a class="ft_t" href="index.html#brand_intr">品牌介紹</a>
                 <!--scroll-behavior: smooth-->
                 <a class="ft_t" href="./product.html">商品介紹</a>
                 <a class="ft_t" href="./news.html">最新消息</a>
                 <a class="ft_t" href="./about.html">關於我們</a>
                 <a class="ft_t" href="./Q&A.html">常見問題</a> 
-                <a class="member" href="./member.html">
+                <a class="member js_member" href="#">
                     <i class="fa-solid fa-user"></i>
                     <div class="mem_p">會員登入</div>
                 </a>
@@ -47,9 +47,37 @@
             </nav>  
         </div>
     </header>
+    <div class="col-12 col-md-12" id="mm">
+        <h2 class="member_title">會員登入</h2>
+        <form class="member_login">
+            <label for="account">帳號</label>
+            <input type="email" id="account" placeholder=" 請輸入Email" size="30">
+            <br>
+            <label for="number">密碼</label>
+            <input type="password" id="number" placeholder=" 密碼為8~12碼(含英文大小寫)" minlength="8" maxlength="12" size="30">
+            <br>
+            <input type="submit" value="登入" class="submit_btn">
+            <br>
+            <button class="btn_f">
+                <img src="./member_photo/facebook.png" alt="facebook" class="btn_icon">
+                facebook 登入</button>
+            <button class="btn_l">
+                <img src="./member_photo/line.png" alt="line" class="btn_icon">
+                line 登入</button>
+            <br>
+            <button class="btn_log">尚未註冊？</button>
+        </form>
+    </div>
+
     <div class="product_information">
         <div class="container">
             <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="in_cart">
+                        <i class="fa-regular fa-circle-check" id="tick"></i>
+                        <p class="in_cart_p">已加入購物車</p>
+                    </div>
+                </div>
                 <div class="col-12 col-md-6" id="product_card">
                     <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="">
                 </div>
@@ -63,22 +91,19 @@
                         <button class="plus" data-product-id="ocean">+</button>
                     </div>
                     <div class="btn_a">
-                        <button class="btn_cart" href="">
+                        <button class="btn_cart js_btn_cart" href="">
                             <img class="btn_icon" src="./HomePage_Photo/cart.png" alt="加入購物車">
                             加入購物車
                         </button>
-                        <a class="btn_buy" href="./cart.html">
+                        <button class="btn_cart js_btn_buy" href="./cart.html">
                             <img class="btn_icon" src="./HomePage_Photo/bag.png" alt="立即購買">
                             立即購買
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="line"></div>
-            <div class="in_cart">
-                <i class="fa-regular fa-circle-check" id="tick"></i>
-                <p class="in_cart_p">已加入購物車</p>
-            </div>    
+            
         </div>
         </div>
         <h2 class="product_introduce">商品介紹</h2>

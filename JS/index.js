@@ -30,7 +30,6 @@ $(document).ready(function() {
 
 
 
-
 //product information
 
 $(document).ready(function(e){

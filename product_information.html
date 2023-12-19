@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 product_card" >
-                    <img class="product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="">
+                    <img class="product_photo js_product_photo" src="./HomePage_Photo/海洋寧靜.jpg" alt="海洋寧靜">
                 </div>
                 <div class="col-12 col-md-6 product_card" >
                     <p class="product_name js_product_name">商品名稱: 海洋寧靜</p>
@@ -196,10 +196,12 @@ document.addEventListener('DOMContentLoaded', function () {
             var productCard = button.closest('.product_card');
             var productNameElement = productCard.querySelector('.js_product_name');
             var productPriceElement = productCard.querySelector('.js_product_price');
+            // var productPhotoElement = productCard.querySelector('.js_product_photo');
 
             if (productNameElement && productPriceElement) {
                 var productName = productNameElement.innerText;
                 var productPrice = productPriceElement.innerText;
+                // var productPhoto = productPhotoElement.getAttribute('src');
 
                 // 創建或從localStorage中獲取購物車項目
                 var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -215,6 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     var cartItem = {
                         name: productName,
                         price: productPrice,
+                        // img: productPhoto,
                         quantity: 1
                     };
 

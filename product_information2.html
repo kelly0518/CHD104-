@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information</title>
+    <link rel="stylesheet" href="./CSS/grid.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/product_information.css">
+
+    <link rel="icon" href="./HomePage_Photo/icon3.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./JS/jquery-3.7.1.js"></script>
+    <script src="./JS/index.js"></script>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="menu">
+        <div class="hometitle">
+            <div class="logo">
+                <a class="logo_a" href="./index.html">
+                <img class="logo_photo" src="./HomePage_Photo/logo.svg" alt="Candleternity">
+                </a>
+            </div>
+            <label for="menu" class="hbtn">
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="function">
+                <a class="ft_t" href="index.html#brand_intr">品牌介紹</a>
+                <!--scroll-behavior: smooth-->
+                <a class="ft_t" href="./product.html">商品介紹</a>
+                <a class="ft_t" href="./news.html">最新消息</a>
+                <a class="ft_t" href="./about.html">關於我們</a>
+                <a class="ft_t" href="./Q&A.html">常見問題</a> 
+                <a class="member js_member" href="#">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="mem_p">會員登入</div>
+                </a>
+                <a class="member" href="./cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="mem_p2">購物車</div>
+                </a>
+            </nav>  
+        </div>
+    </header>
+    <div class="col-12 col-md-12" id="mm">
+        <h2 class="member_title">會員登入</h2>
+        <form class="member_login">
+            <label for="account">帳號</label>
+            <input type="email" id="account" placeholder=" 請輸入Email" size="30">
+            <br>
+            <label for="number">密碼</label>
+            <input type="password" id="number" placeholder=" 密碼為8~12碼(含英文大小寫)" minlength="8" maxlength="12" size="30">
+            <br>
+            <input type="submit" value="登入" class="submit_btn">
+            <br>
+            <button class="btn_f">
+                <img src="./member_photo/facebook.png" alt="facebook" class="btn_icon">
+                facebook 登入</button>
+            <button class="btn_l">
+                <img src="./member_photo/line.png" alt="line" class="btn_icon">
+                line 登入</button>
+            <br>
+            <button class="btn_log">尚未註冊？</button>
+        </form>
+    </div>
+
+    <div class="product_information">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="in_cart">
+                        <i class="fa-regular fa-circle-check" id="tick"></i>
+                        <p class="in_cart_p">已加入購物車</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 product_card" >
+                    <img class="product_photo" src="./HomePage_Photo/夜空星辰.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-6 product_card" >
+                    <p class="product_name js_product_name">商品名稱: 夜空星辰</p>
+                    <p class="product_name js_product_price">價格: NT$599</p>
+                    <div class="product_name">
+                        選擇數量:
+                        <button class="minus" data-product-id="ocean">-</button>
+                        <div class="num" data-product-id="ocean">1</div>
+                        <button class="plus" data-product-id="ocean">+</button>
+                    </div>
+                    <div class="btn_a">
+                        <button class="btn_cart js_btn_cart" href="">
+                            <img class="btn_icon" src="./HomePage_Photo/cart.png" alt="加入購物車">
+                            加入購物車
+                        </button>
+                        <button class="btn_cart js_btn_buy" href="./cart.html">
+                            <img class="btn_icon" src="./HomePage_Photo/bag.png" alt="立即購買">
+                            立即購買
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            
+        </div>
+        </div>
+        <h2 class="product_introduce">商品介紹</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 product_card" >
+                    <p class="pd_p">此款蠟燭的香氣主要由檀香、香草和琥珀組成，這些成分營造出深沉而令人陶醉的香氣。中調則添加了淡淡的橙子和玫瑰，增加了複雜性和溫暖感。。它能為您帶來神秘的氛圍。</p>
+                </div>
+                <div class="col-12 col-md-6 product_card" >
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-6 product_card" >
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-6 product_card" >
+                    <p class="pd_p">調香細節：
+                        主調：檀香、香草
+                        中調：橙子、玫瑰
+                        後調：琥珀、綠草</p>
+                </div>
+                <div class="col-12 col-md-6 product_card" >
+                    <p class="pd_p">尺寸：
+                        直徑：10cm
+                        高度：15cm</p>
+                </div>
+                <div class="col-12 col-md-6 product_card" >
+                    <img class="product_photo" src="./HomePage_Photo/product.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="homefoot">
+            <div class="container">
+                <div class="row" id="ft_r">
+                    <div class="col-12 col-md-6">
+                        <div class="foot_function">
+                            <a class="foot_btn" href="./index.html">Top</a>
+                            <a class="foot_btn" href="#brand_intr">Story</a>
+                            <a class="foot_btn" href="./product.html">Product</a>
+                            <a class="foot_btn" href="./news.html">News</a>
+                            <a class="foot_btn" href="./about.html">About</a>
+                            <a class="foot_btn" href="./Q&A.html">Q&A</a>
+                        </div>
+                        <div class="foot_information">
+                            <p>Candleternity0702@gmail.com</p>
+                            <p>桃園市一二區三四街56號</p>
+                            <p>02-1111-2222</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="foot_icon">
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-square-facebook"></i> -->
+                                <img class="ft_pt" src="./HomePage_Photo/facebook.png" alt="facebook">
+                            </a>
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-line" id="ln"></i> -->
+                                <img class="ft_pt" src="./HomePage_Photo/line.png" alt="line">
+                            </a>
+                            <a class="ft_ic" href="#">
+                                <!-- <i class="fa-brands fa-instagram"></i> -->
+                                <img class="ft_pt" src="./HomePage_Photo/instagram.png" alt="insragram">
+                            </a>
+                        </div>
+                        <!-- <div class="logo_icon">
+                            <img class="logo_ic" src="./HomePage_Photo/logo_circle.svg" alt="">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="cr_p">
+                <p class="copyright">© Candleternity 2023 </p>
+                <p class="copyright">本網站為緯育Tibame前端班CHD104學員專題作品，僅供學習、展示用。</p>
+                <!-- <p class="copyright">僅供學習、展示用。</p> -->
+            </div>
+        </div>
+    </footer>  
+    <!-- 在商品頁面上的 JavaScript 代碼 -->
+<script>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var addToCartButtons = document.querySelectorAll('.js_btn_cart');
+
+    addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            // 獲取商品信息
+            var productCard = button.closest('.product_card');
+            var productNameElement = productCard.querySelector('.js_product_name');
+            var productPriceElement = productCard.querySelector('.js_product_price');
+
+            if (productNameElement && productPriceElement) {
+                var productName = productNameElement.innerText;
+                var productPrice = productPriceElement.innerText;
+
+                // 創建或從localStorage中獲取購物車項目
+                var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+                // 檢查項目是否已經在購物車中
+                var existingItem = cartItems.find(item => item.name === productName);
+
+                if (existingItem) {
+                    // 如果項目存在，增加數量
+                    existingItem.quantity++;
+                } else {
+                    // 如果項目不存在，將其添加到購物車
+                    var cartItem = {
+                        name: productName,
+                        price: productPrice,
+                        quantity: 1
+                    };
+
+                    cartItems.push(cartItem);
+                }
+
+                // 將更新後的購物車項目保存到localStorage
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            } else {
+                console.error('未找到商品信息');
+            }
+        });
+    });
+});
+
+    </script>
+    
+    
+</body>
+</html>

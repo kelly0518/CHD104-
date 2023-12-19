@@ -186,10 +186,16 @@
 #account{
     margin-top: 20px;
     margin-left: 10px;
+    border: 1px solid var(--color_brown);
+    border-radius: 5px;
+    height: 20px;
 }
 #number{
     margin-top: 20px;
     margin-left: 10px;
+    border: 1px solid var(--color_brown);
+    border-radius: 5px;
+    height: 20px;
 }
 .btn_f{
     margin-top: 20px;
@@ -292,7 +298,20 @@
     line-height: 50px;
     margin-left: 50px;
 }
-
+.minus{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color_brown);
+    border-radius: 50%;
+    /* text-align: center; */
+}
+.plus{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color_brown);
+    border-radius: 50%;
+    /* text-align: center; */
+}
 .num{
     display: inline-block;
 }

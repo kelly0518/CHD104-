@@ -186,10 +186,16 @@
 #account{
     margin-top: 20px;
     margin-left: 10px;
+    border: 1px solid var(--color_brown);
+    border-radius: 5px;
+    height: 20px;
 }
 #number{
     margin-top: 20px;
     margin-left: 10px;
+    border: 1px solid var(--color_brown);
+    border-radius: 5px;
+    height: 20px;
 }
 .btn_f{
     margin-top: 20px;

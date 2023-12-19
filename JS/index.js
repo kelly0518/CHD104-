@@ -30,6 +30,52 @@ $(document).ready(function() {
     });
 });
 
+// $(function () {
+//     let divWidth = $('#c').width()
+//     let imgCount = $('#product_card').length
+
+//     for(let i = 0; i < imgCount; i++){
+//         $('#productButton').append(`<li></li>`)
+
+//     }
+//     $('#productButton li:first').addClass('clicked')
+
+//     $('#product_card').width(divWidth)
+//     $('#r').width(divWidth * imgCount)
+
+//     let index = 0
+//     let timer = setInterval(moveToNext, 5000)
+
+//     $('#productButton li').click(function(){
+//         clearInterval(timer)
+//         index = $(this).index()
+//         $('#r').animate({
+//             left: divWidth * index * -1,
+//         })
+
+//         $(this).addClass('clicked')
+//         $('#productButton li').not(this).removeClass('clicked')
+//         timer = setInterval(moveToNext, 5000)
+//     })
+
+//     function moveToNext(){
+//         if(index < imgCount - 1 ){
+//             index++
+//         }else{
+//             index = 0
+//         }
+//         index++
+
+//         $('#r').animate({
+//             left: divWidth * index * -1,
+//         })
+
+//         $(`#productButton li:eq(${index})`).addClass('clicked')
+//         $('#productButton li').not(`:eq(${index})`).removeClass('clicked')
+//     }
+
+// });
+
 
 
 //product information

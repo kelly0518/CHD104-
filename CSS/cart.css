@@ -154,8 +154,8 @@
     width: 600px;
     height: 400px;
     /* aspect-ratio: 600/400; */
-    background-color:rgba(255,255,255,0.8);
-    border-radius: 10px;
+    background-color:rgba(255,255,255,0.9);
+    border-radius: 12px;
     position: absolute;
     left: 50%;
     top: 20%;
@@ -165,8 +165,9 @@
     transform: translateX(-50%);
     display: none;
     @media (max-width: 768px) {
-        width: 90%; /* 或者根據需要調整百分比 */
-        aspect-ratio: 4/1; /* 保持 2:3 的長寬比例，可以根據需要調整 */
+        width: 90%; 
+        height: 45%;
+        aspect-ratio: 3/2;
     }
 }
 .member_title{
@@ -294,10 +295,10 @@
     position: absolute;
     top:120%;
 }
-.cart_content{
-    /* border: 1px solid red; */
-    /* display: none; */
-}
+/* .cart_content{
+    border: 1px solid red;
+    display: none;
+} */
 .cart_title{
     font-size: 22px;
     color: var(--color_font);
